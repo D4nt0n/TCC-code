@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generated on 2022-07-14 11:37:48.520117 by $Id: ptlines2flows.py v1_3_1+0313-ccb31df3eb jakob.erdmann@dlr.de 2019-09-02 13:26:32 +0200 $ v1_12_0+0000-800cb422fa4
+  options: 
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="pt_bus" vClass="bus"/>
+    <vType id="pt_tram" vClass="tram"/>
+    <vType id="pt_train" vClass="rail"/>
+    <vType id="pt_subway" vClass="rail_urban"/>
+    <vType id="pt_light_rail" vClass="rail_urban"/>
+    <vType id="pt_monorail" vClass="rail"/>
+    <vType id="pt_trolleybus" vClass="bus"/>
+    <vType id="pt_minibus" vClass="bus"/>
+    <vType id="pt_share_taxi" vClass="taxi"/>
+    <vType id="pt_aerialway" vClass="bus"/>
+    <vType id="pt_ferry" vClass="ship"/>
+    <route id="pt_bus_173:0" color="210,73,23" edges="564110270#0 564110270#1" >
+    </route>
+    <route id="pt_bus_10.7:1" color="237,28,36" edges="926832644" >
+    </route>
+    <route id="pt_bus_10.3:1" color="237,28,36" edges="926832644" >
+    </route>
+    <route id="pt_bus_10.52:1" color="237,28,36" edges="926832644" >
+    </route>
+    <route id="pt_bus_10.51:1" color="237,28,36" edges="926832644" >
+    </route>
+    <route id="pt_bus_10.5:1" color="237,28,36" edges="926832644" >
+    </route>
+    <route id="pt_bus_173:1" color="210,73,23" edges="203195780#0 203195780#1 203195780#2 203195780#3 203195780#4 203195780#5 451653416 451653417#0 451653417#1" >
+        <stop busStop="2020491294" duration="20" until="124.0"/> <!-- None -->
+        <stop busStop="2019753911" duration="20" until="169.0"/> <!-- None -->
+        <stop busStop="2020491290" duration="20" until="206.0"/> <!-- None -->
+    </route>
+    <route id="pt_bus_:1" edges="36995557 27089998 472157816 27090050 447936230" >
+        <stop busStop="297232808" duration="20" until="64.0"/> <!-- None -->
+    </route>
+    <route id="pt_bus_282:0" color="156,109,44" edges="203195780#0 203195780#1 203195780#2 203195780#3 203195780#4 203195780#5 451653416 451653417#0 451653417#1" >
+    </route>
+    <route id="pt_bus_282:1" color="156,109,44" edges="203195780#0 203195780#1 203195780#2 203195780#3 203195780#4 203195780#5 451653416 451653417#0 451653417#1" >
+        <stop busStop="2020491300" duration="20" until="103.0"/> <!-- None -->
+    </route>
+    <route id="pt_bus_10.41:0" color="237,28,36" edges="926832644" >
+    </route>
+    <route id="pt_bus_:0" edges="207947182 407832897 338426672 36995557" >
+        <stop busStop="297232808" duration="20" until="199.0"/> <!-- None -->
+    </route>
+    <route id="pt_bus_10.4:1" color="237,28,36" edges="926832644" >
+    </route>
+    <route id="pt_subway_1:0" color="0,0,128" edges="29209487" >
+        <stop busStop="656505163" duration="20" until="80.0"/> <!-- São Pedro -->
+        <stop busStop="611903060" duration="20" until="209.0"/> <!-- Rodoviária -->
+    </route>
+    <route id="pt_bus_:3" edges="36995557 27089998 472157816 27090050 447936230" >
+        <stop busStop="297232808" duration="20" until="63.0"/> <!-- None -->
+    </route>
+    <route id="pt_bus_POA-SFP(via_NH):0" edges="36995557 27089998 472157816 27090050 447936230" >
+        <stop busStop="297232808" duration="20" until="96.0"/> <!-- None -->
+    </route>
+    <route id="pt_bus_POA-TCO(via_TAQ):0" edges="36995557 27089998 472157816 27090050 447936230" >
+        <stop busStop="297232808" duration="20" until="127.0"/> <!-- None -->
+    </route>
+    <route id="pt_bus_POA-CAN(via_NP-S/D):0" edges="36995557" >
+        <stop busStop="297232808" duration="20" until="173.0"/> <!-- None -->
+    </route>
+    <route id="pt_bus_POA-TCO:0" edges="36995557 27089998 472157816 27090050 447936230" >
+        <stop busStop="297232808" duration="20" until="159.0"/> <!-- None -->
+    </route>
+    <route id="pt_subway_1:1" color="0,0,128" edges="550950817" >
+        <stop busStop="5320504014" duration="20" until="51.0"/> <!-- Rodoviária -->
+        <stop busStop="5320504005" duration="20" until="82.0"/> <!-- São Pedro -->
+    </route>
+    <route id="pt_subway_1:2" color="0,0,128" edges="550950817" >
+        <stop busStop="5320504014" duration="20" until="40.0"/> <!-- Rodoviária -->
+        <stop busStop="5320504005" duration="20" until="71.0"/> <!-- São Pedro -->
+    </route>
+    <route id="pt_subway_1:3" color="0,0,128" edges="29209487" >
+        <stop busStop="656505163" duration="20" until="80.0"/> <!-- São Pedro -->
+        <stop busStop="611903060" duration="20" until="209.0"/> <!-- Rodoviária -->
+    </route>
+    <route id="pt_bus_POA-CAN(via_NP):0" edges="36995557 27089998 472157816 27090050 447936230" >
+        <stop busStop="297232808" duration="20" until="205.0"/> <!-- None -->
+    </route>
+    <route id="pt_bus_:2" edges="207947182 407832897 338426672 36995557" >
+        <stop busStop="297232808" duration="20" until="337.0"/> <!-- None -->
+    </route>
+    <route id="pt_bus_POA-RIO(via_SL):0" edges="36995557 27089998 472157816 27090050 447936230" >
+        <stop busStop="297232808" duration="20" until="233.0"/> <!-- None -->
+    </route>
+    <route id="pt_bus_SFP-POA(via_NH):0" edges="207947182 407832897 338426672 36995557" >
+        <stop busStop="297232808" duration="20" until="367.0"/> <!-- None -->
+    </route>
+    <route id="pt_bus_TCO-POA(via_TAQ):0" edges="207947182 407832897 338426672 36995557" >
+        <stop busStop="297232808" duration="20" until="415.0"/> <!-- None -->
+    </route>
+    <route id="pt_bus_TCO-POA(via_AERO):0" edges="207947182 407832897 338426672 36995557 27089998 472157816 27090050 447936230" >
+        <stop busStop="297232808" duration="20" until="383.0"/> <!-- None -->
+    </route>
+    <route id="pt_bus_TCO-POA:0" edges="207947182 407832897 338426672 36995557" >
+        <stop busStop="297232808" duration="20" until="446.0"/> <!-- None -->
+    </route>
+    <route id="pt_bus_CAN-POA(via_NP):0" edges="207947182 407832897 338426672 36995557" >
+        <stop busStop="297232808" duration="20" until="471.0"/> <!-- None -->
+    </route>
+    <route id="pt_bus_RIO-POA(via_SL):0" edges="207947182 407832897 338426672 36995557" >
+        <stop busStop="297232808" duration="20" until="501.0"/> <!-- None -->
+    </route>
+    <flow id="pt_bus_173:0" type="pt_bus" route="pt_bus_173:0" begin="3.0" end="3603.0" period="600" line="173:0" >
+        <param key="name" value="Camaquã"/>
+        <param key="completeness" value="0.00"/>
+    </flow>
+    <flow id="pt_bus_10.7:1" type="pt_bus" route="pt_bus_10.7:1" begin="102.0" end="3702.0" period="600" line="10.7:1" >
+        <param key="name" value="Belém Novo"/>
+        <param key="completeness" value="0.00"/>
+    </flow>
+    <flow id="pt_bus_10.3:1" type="pt_bus" route="pt_bus_10.3:1" begin="137.0" end="3737.0" period="600" line="10.3:1" >
+        <param key="name" value="Cristal"/>
+        <param key="completeness" value="0.00"/>
+    </flow>
+    <flow id="pt_bus_10.52:1" type="pt_bus" route="pt_bus_10.52:1" begin="158.0" end="3758.0" period="600" line="10.52:1" >
+        <param key="name" value="Guarujá / Ponta Grossa"/>
+        <param key="completeness" value="0.00"/>
+    </flow>
+    <flow id="pt_bus_10.51:1" type="pt_bus" route="pt_bus_10.51:1" begin="160.0" end="3760.0" period="600" line="10.51:1" >
+        <param key="name" value="Guarujá via Cavalhada"/>
+        <param key="completeness" value="0.00"/>
+    </flow>
+    <flow id="pt_bus_10.5:1" type="pt_bus" route="pt_bus_10.5:1" begin="160.0" end="3760.0" period="600" line="10.5:1" >
+        <param key="name" value="Guarujá via Wenceslau Escobar"/>
+        <param key="completeness" value="0.00"/>
+    </flow>
+    <flow id="pt_bus_173:1" type="pt_bus" route="pt_bus_173:1" begin="6.0" end="3606.0" period="600" line="173:1" >
+        <param key="name" value="Camaquã"/>
+        <param key="completeness" value="0.14"/>
+    </flow>
+    <flow id="pt_bus_:1" type="pt_bus" route="pt_bus_:1" begin="55.0" end="3655.0" period="600" line=":1" >
+        <param key="completeness" value="0.33"/>
+    </flow>
+    <flow id="pt_bus_282:0" type="pt_bus" route="pt_bus_282:0" begin="15.0" end="3615.0" period="600" line="282:0" >
+        <param key="name" value="Cruzeiro do Sul"/>
+        <param key="completeness" value="0.00"/>
+    </flow>
+    <flow id="pt_bus_282:1" type="pt_bus" route="pt_bus_282:1" begin="21.0" end="3621.0" period="600" line="282:1" >
+        <param key="name" value="Cruzeiro do Sul"/>
+        <param key="completeness" value="0.05"/>
+    </flow>
+    <flow id="pt_bus_10.41:0" type="pt_bus" route="pt_bus_10.41:0" begin="228.0" end="3828.0" period="600" line="10.41:0" >
+        <param key="name" value="Ipanema / Jardim Isabel"/>
+        <param key="completeness" value="0.00"/>
+    </flow>
+    <flow id="pt_bus_:0" type="pt_bus" route="pt_bus_:0" begin="28.0" end="3628.0" period="600" line=":0" >
+        <param key="completeness" value="0.33"/>
+    </flow>
+    <flow id="pt_bus_10.4:1" type="pt_bus" route="pt_bus_10.4:1" begin="253.0" end="3853.0" period="600" line="10.4:1" >
+        <param key="name" value="Ipanema"/>
+        <param key="completeness" value="0.00"/>
+    </flow>
+    <flow id="pt_subway_1:0" type="pt_subway" route="pt_subway_1:0" begin="38.0" end="3638.0" period="600" line="1:0" >
+        <param key="name" value="Sul: Novo Hamburgo - Mercado"/>
+        <param key="completeness" value="0.10"/>
+    </flow>
+    <flow id="pt_bus_:3" type="pt_bus" route="pt_bus_:3" begin="522.0" end="4122.0" period="600" line=":3" >
+        <param key="completeness" value="0.33"/>
+    </flow>
+    <flow id="pt_bus_POA-SFP(via_NH):0" type="pt_bus" route="pt_bus_POA-SFP(via_NH):0" begin="527.0" end="4127.0" period="600" line="POA-SFP(via_NH):0" >
+        <param key="name" value="POA-SFP(via NH)"/>
+        <param key="completeness" value="0.10"/>
+    </flow>
+    <flow id="pt_bus_POA-TCO(via_TAQ):0" type="pt_bus" route="pt_bus_POA-TCO(via_TAQ):0" begin="535.0" end="4135.0" period="600" line="POA-TCO(via_TAQ):0" >
+        <param key="name" value="POA-TCO(via TAQ)"/>
+        <param key="completeness" value="0.25"/>
+    </flow>
+    <flow id="pt_bus_POA-CAN(via_NP-S/D):0" type="pt_bus" route="pt_bus_POA-CAN(via_NP-S/D):0" begin="565.0" end="4165.0" period="600" line="POA-CAN(via_NP-S/D):0" >
+        <param key="name" value="POA-CAN(via NP-S/D)"/>
+        <param key="completeness" value="0.12"/>
+    </flow>
+    <flow id="pt_bus_POA-TCO:0" type="pt_bus" route="pt_bus_POA-TCO:0" begin="541.0" end="4141.0" period="600" line="POA-TCO:0" >
+        <param key="name" value="POA-TCO"/>
+        <param key="completeness" value="0.33"/>
+    </flow>
+    <flow id="pt_subway_1:1" type="pt_subway" route="pt_subway_1:1" begin="593.0" end="4193.0" period="600" line="1:1" >
+        <param key="name" value="Norte: Mercado - Novo Hamburgo"/>
+        <param key="completeness" value="0.10"/>
+    </flow>
+    <flow id="pt_subway_1:2" type="pt_subway" route="pt_subway_1:2" begin="608.0" end="4208.0" period="600" line="1:2" >
+        <param key="name" value="Norte: Mercado - Sapucaia"/>
+        <param key="completeness" value="0.14"/>
+    </flow>
+    <flow id="pt_subway_1:3" type="pt_subway" route="pt_subway_1:3" begin="598.0" end="4198.0" period="600" line="1:3" >
+        <param key="name" value="Sul: Sapucaia - Mercado"/>
+        <param key="completeness" value="0.14"/>
+    </flow>
+    <flow id="pt_bus_POA-CAN(via_NP):0" type="pt_bus" route="pt_bus_POA-CAN(via_NP):0" begin="572.0" end="4172.0" period="600" line="POA-CAN(via_NP):0" >
+        <param key="name" value="POA-CAN(via NP)"/>
+        <param key="completeness" value="0.11"/>
+    </flow>
+    <flow id="pt_bus_:2" type="pt_bus" route="pt_bus_:2" begin="517.0" end="4117.0" period="600" line=":2" >
+        <param key="completeness" value="0.33"/>
+    </flow>
+    <flow id="pt_bus_POA-RIO(via_SL):0" type="pt_bus" route="pt_bus_POA-RIO(via_SL):0" begin="583.0" end="4183.0" period="600" line="POA-RIO(via_SL):0" >
+        <param key="name" value="POA-RIO(via SL)"/>
+        <param key="completeness" value="0.08"/>
+    </flow>
+    <flow id="pt_bus_SFP-POA(via_NH):0" type="pt_bus" route="pt_bus_SFP-POA(via_NH):0" begin="525.0" end="4125.0" period="600" line="SFP-POA(via_NH):0" >
+        <param key="name" value="SFP-POA(via NH)"/>
+        <param key="completeness" value="0.09"/>
+    </flow>
+    <flow id="pt_bus_TCO-POA(via_TAQ):0" type="pt_bus" route="pt_bus_TCO-POA(via_TAQ):0" begin="553.0" end="4153.0" period="600" line="TCO-POA(via_TAQ):0" >
+        <param key="name" value="TCO-POA(via TAQ)"/>
+        <param key="completeness" value="0.25"/>
+    </flow>
+    <flow id="pt_bus_TCO-POA(via_AERO):0" type="pt_bus" route="pt_bus_TCO-POA(via_AERO):0" begin="547.0" end="4147.0" period="600" line="TCO-POA(via_AERO):0" >
+        <param key="name" value="TCO-POA(via AERO)"/>
+        <param key="completeness" value="0.20"/>
+    </flow>
+    <flow id="pt_bus_TCO-POA:0" type="pt_bus" route="pt_bus_TCO-POA:0" begin="561.0" end="4161.0" period="600" line="TCO-POA:0" >
+        <param key="name" value="TCO-POA"/>
+        <param key="completeness" value="0.33"/>
+    </flow>
+    <flow id="pt_bus_CAN-POA(via_NP):0" type="pt_bus" route="pt_bus_CAN-POA(via_NP):0" begin="574.0" end="4174.0" period="600" line="CAN-POA(via_NP):0" >
+        <param key="name" value="CAN-POA(via NP)"/>
+        <param key="completeness" value="0.10"/>
+    </flow>
+    <flow id="pt_bus_RIO-POA(via_SL):0" type="pt_bus" route="pt_bus_RIO-POA(via_SL):0" begin="582.0" end="4182.0" period="600" line="RIO-POA(via_SL):0" >
+        <param key="name" value="RIO-POA(via SL)"/>
+        <param key="completeness" value="0.11"/>
+    </flow>
+</routes>

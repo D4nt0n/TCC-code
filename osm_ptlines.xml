@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2022-07-14 11:37:00 by Eclipse SUMO netconvert Version 1.12.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <type-files value="C:\Program%20Files%20(x86)\Eclipse\Sumo\data\typemap\osmNetconvert.typ.xml,C:\Program%20Files%20(x86)\Eclipse\Sumo\data\typemap\osmNetconvertUrbanDe.typ.xml,C:\Program%20Files%20(x86)\Eclipse\Sumo\data\typemap\osmNetconvertPedestrians.typ.xml,C:\Program%20Files%20(x86)\Eclipse\Sumo\data\typemap\osmNetconvertBicycle.typ.xml"/>
+        <osm-files value="osm_bbox.osm.xml"/>
+    </input>
+
+    <output>
+        <output-file value="osm.net.xml"/>
+        <output.street-names value="true"/>
+        <output.original-names value="true"/>
+        <ptstop-output value="osm_stops.add.xml"/>
+        <ptline-output value="osm_ptlines.xml"/>
+    </output>
+
+    <projection>
+        <proj.utm value="true"/>
+    </projection>
+
+    <processing>
+        <geometry.remove value="true"/>
+        <roundabouts.guess value="true"/>
+    </processing>
+
+    <tls_building>
+        <tls.discard-simple value="true"/>
+        <tls.join value="true"/>
+        <tls.guess-signals value="true"/>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+
+    <ramp_guessing>
+        <ramps.guess value="true"/>
+    </ramp_guessing>
+
+    <junctions>
+        <junctions.join value="true"/>
+        <junctions.corner-detail value="5"/>
+    </junctions>
+
+    <pedestrian>
+        <crossings.guess value="true"/>
+    </pedestrian>
+
+    <railway>
+        <railway.topology.repair value="true"/>
+        <railway.topology.repair.stop-turn value="true"/>
+    </railway>
+
+    <formats>
+        <osm.bike-access value="true"/>
+        <osm.sidewalks value="true"/>
+    </formats>
+
+    <report>
+        <verbose value="true"/>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<ptLines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/ptlines_file.xsd">
+    <ptLine id="2727021" name="Camaquã" line="173" type="bus" vClass="bus" color="210,73,23" completeness="0.00">
+        <route edges="564110270#0 564110270#1"/>
+    </ptLine>
+    <ptLine id="2727022" name="Camaquã" line="173" type="bus" vClass="bus" color="210,73,23" completeness="0.14">
+        <route edges="203195780#0 203195780#1 203195780#2 203195780#3 203195780#4 203195780#5 451653416 451653417#0 451653417#1"/>
+        <busStop id="2020491294" name=""/>
+        <busStop id="2019753911" name=""/>
+        <busStop id="2020491290" name=""/>
+    </ptLine>
+    <ptLine id="2727023" name="Cruzeiro do Sul" line="282" type="bus" vClass="bus" color="156,109,44" completeness="0.00">
+        <route edges="203195780#0 203195780#1 203195780#2 203195780#3 203195780#4 203195780#5 451653416 451653417#0 451653417#1"/>
+    </ptLine>
+    <ptLine id="2727024" name="Cruzeiro do Sul" line="282" type="bus" vClass="bus" color="156,109,44" completeness="0.05">
+        <route edges="203195780#0 203195780#1 203195780#2 203195780#3 203195780#4 203195780#5 451653416 451653417#0 451653417#1"/>
+        <busStop id="2020491300" name=""/>
+    </ptLine>
+    <ptLine id="2727025" name="Liberal (retorno escola)" line="1861" type="bus" vClass="bus" color="63,125,155" completeness="0.00"/>
+    <ptLine id="2727026" name="Liberal" line="186" type="bus" vClass="bus" color="63,125,155" completeness="0.04">
+        <busStop id="1285386828" name=""/>
+    </ptLine>
+    <ptLine id="2727027" name="Liberal" line="186" type="bus" vClass="bus" color="63,125,155" completeness="0.00"/>
+    <ptLine id="3180635" line="" type="bus" vClass="bus" completeness="0.33">
+        <route edges="207947182 407832897 338426672 36995557"/>
+        <busStop id="297232808" name=""/>
+    </ptLine>
+    <ptLine id="420335" name="Sul: Novo Hamburgo - Mercado" line="1" type="subway" vClass="rail_urban" color="0,0,128" completeness="0.10">
+        <route edges="29209487"/>
+        <busStop id="656505163" name="São Pedro"/>
+        <busStop id="611903060" name="Rodoviária"/>
+    </ptLine>
+    <ptLine id="4525395" name="Travessia Porto Alegre - Guaíba / BarraShoppingSul" line="Travessia Porto Alegre - Guaíba / BarraShoppingSul" type="ferry" vClass="ignoring" color="255,165,0" completeness="0.00"/>
+    <ptLine id="4525396" name="Travessia Porto Alegre - Guaíba / BarraShoppingSul" line="Travessia Porto Alegre - Guaíba / BarraShoppingSul" type="ferry" vClass="ignoring" color="255,165,0" completeness="0.00"/>
+    <ptLine id="4525397" name="Travessia Porto Alegre - Guaíba" line="Travessia Porto Alegre - Guaíba" type="ferry" vClass="ignoring" color="255,165,0" completeness="0.00"/>
+    <ptLine id="5479690" line="" type="bus" vClass="bus" completeness="0.33">
+        <route edges="36995557 27089998 472157816 27090050 447936230"/>
+        <busStop id="297232808" name=""/>
+    </ptLine>
+    <ptLine id="6722853" name="Alto Teresópolis" line="20.5" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722854" name="Alto Teresópolis" line="20.5" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722855" name="Auxiliadora via Padre Chagas" line="50.1" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722858" name="Auxiliadora via Padre Chagas" line="50.1" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722859" name="Auxiliadora" line="50.11" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722860" name="Auxiliadora" line="50.11" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722861" name="Belém Novo" line="10.7" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722862" name="Belém Novo" line="10.7" type="bus" vClass="bus" color="237,28,36" completeness="0.00">
+        <route edges="926832644"/>
+    </ptLine>
+    <ptLine id="6722863" name="Canal 10 via Antônio Ribeiro" line="30.11" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722864" name="Canal 10 via Antônio Ribeiro" line="30.11" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722865" name="Canal 10" line="30.1" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722866" name="Canal 10" line="30.1" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722867" name="Chácara das Pedras / Paineira" line="40.5" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722868" name="Chácara das Pedras / Paineira" line="40.5" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722869" name="Chácara das Pedras / Três Figueiras" line="40.51" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722870" name="Chácara das Pedras / Três Figueiras" line="40.51" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722871" name="Cristal" line="10.3" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722872" name="Cristal" line="10.3" type="bus" vClass="bus" color="237,28,36" completeness="0.00">
+        <route edges="926832644"/>
+    </ptLine>
+    <ptLine id="6722873" name="Glória" line="20.6" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722874" name="Glória" line="20.6" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722875" name="Guarujá / Ponta Grossa" line="10.52" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722876" name="Guarujá / Ponta Grossa" line="10.52" type="bus" vClass="bus" color="237,28,36" completeness="0.00">
+        <route edges="926832644"/>
+    </ptLine>
+    <ptLine id="6722877" name="Guarujá via Cavalhada" line="10.51" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722878" name="Guarujá via Cavalhada" line="10.51" type="bus" vClass="bus" color="237,28,36" completeness="0.00">
+        <route edges="926832644"/>
+    </ptLine>
+    <ptLine id="6722879" name="Guarujá via Wenceslau Escobar" line="10.5" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722880" name="Guarujá via Wenceslau Escobar" line="10.5" type="bus" vClass="bus" color="237,28,36" completeness="0.00">
+        <route edges="926832644"/>
+    </ptLine>
+    <ptLine id="6722881" name="Higienópolis / Hospital Militar" line="50.81" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722882" name="Higienópolis / Hospital Militar" line="50.81" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722883" name="Higienópolis via Benjamin" line="50.8" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722884" name="Higienópolis via Benjamin" line="50.8" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722885" name="Hospital Conceição / Iguatemi" line="60.21" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722886" name="Hospital Conceição / Iguatemi" line="60.21" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722887" name="Hospital Conceição / Vila Ipiranga" line="60.2" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722888" name="Hospital Conceição / Vila Ipiranga" line="60.2" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722889" name="Humaitá" line="60.4" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722890" name="Humaitá" line="60.4" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722891" name="IAPI" line="50.2" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722892" name="IAPI" line="50.2" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722893" name="Ipanema / Jardim Isabel" line="10.41" type="bus" vClass="bus" color="237,28,36" completeness="0.00">
+        <route edges="926832644"/>
+    </ptLine>
+    <ptLine id="6722894" name="Ipanema / Jardim Isabel" line="10.41" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722895" name="Ipanema" line="10.4" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722896" name="Ipanema" line="10.4" type="bus" vClass="bus" color="237,28,36" completeness="0.00">
+        <route edges="926832644"/>
+    </ptLine>
+    <ptLine id="6722897" name="Ipiranga / PUC via Borges" line="03.1" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722898" name="Ipiranga / PUC via Borges" line="03.1" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722899" name="Ipiranga / PUC via Osvaldo Aranha" line="03.11" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722900" name="Ipiranga / PUC via Osvaldo Aranha" line="03.11" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722901" name="Jardim Botânico" line="03.3" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722902" name="Jardim Botânico" line="03.3" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722903" name="Jardim Leopoldina" line="60.5" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722904" name="Jardim Leopoldina" line="60.5" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722905" name="Jardim Vila Nova" line="20.4" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722906" name="Jardim Vila Nova" line="20.4" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722907" name="João Abbott" line="40.2" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722908" name="João Abbott" line="40.2" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722909" name="Medianeira / Morro São Caetano" line="20.11" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722910" name="Medianeira / Morro São Caetano" line="20.11" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722911" name="Medianeira" line="20.1" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722912" name="Medianeira" line="20.1" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722913" name="Menino Deus via José do Patrocinio" line="02.11" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722914" name="Menino Deus via José do Patrocinio" line="02.11" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722915" name="Menino Deus" line="02.1" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722916" name="Menino Deus" line="02.1" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722917" name="Montserrat / IPA" line="50.31" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722918" name="Montserrat / IPA" line="50.31" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722919" name="Montserrat via Anita" line="50.3" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722920" name="Montserrat via Anita" line="50.3" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722921" name="Otto / Teresópolis" line="20.2" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722922" name="Otto / Teresópolis" line="20.2" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722923" name="Parque dos Maias" line="60.6" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722924" name="Parque dos Maias" line="60.6" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722925" name="Partenon / Campus" line="30.21" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722926" name="Partenon / Campus" line="30.21" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722927" name="Partenon / Pinheiro" line="30.2" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722928" name="Partenon / Pinheiro" line="30.2" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722929" name="Petrópolis / FAPA" line="40.41" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722930" name="Petrópolis / FAPA" line="40.41" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722931" name="Petrópolis / SESC" line="40.4" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722932" name="Petrópolis / SESC" line="40.4" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722933" name="Restinga" line="10.6" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722934" name="Restinga" line="10.6" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722935" name="Rio Branco" line="05.1" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722936" name="Rio Branco" line="05.1" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722937" name="Santana" line="30.3" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722938" name="Santana" line="30.3" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722939" name="Sarandi" line="60.1" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722940" name="Sarandi" line="60.1" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722941" name="Tristeza" line="10.1" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722942" name="Tristeza" line="10.1" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722943" name="Volta do Guerino / Auxiliadora" line="50.61" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722944" name="Volta do Guerino / Auxiliadora" line="50.61" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722945" name="Volta do Guerino via Benjamin" line="50.6" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6722946" name="Volta do Guerino via Benjamin" line="50.6" type="bus" vClass="bus" color="237,28,36" completeness="0.00"/>
+    <ptLine id="6723157" name="Travessia Porto Alegre - Guaíba" line="Travessia Porto Alegre - Guaíba" type="ferry" vClass="ignoring" color="255,165,0" completeness="0.00"/>
+    <ptLine id="7255348" line="" type="bus" vClass="bus" completeness="0.33">
+        <route edges="207947182 407832897 338426672 36995557"/>
+        <busStop id="297232808" name=""/>
+    </ptLine>
+    <ptLine id="7255349" line="" type="bus" vClass="bus" completeness="0.33">
+        <route edges="36995557 27089998 472157816 27090050 447936230"/>
+        <busStop id="297232808" name=""/>
+    </ptLine>
+    <ptLine id="7623778" name="POA-SFP(via NH)" line="POA-SFP(via NH)" type="bus" vClass="bus" completeness="0.10">
+        <route edges="36995557 27089998 472157816 27090050 447936230"/>
+        <busStop id="297232808" name=""/>
+    </ptLine>
+    <ptLine id="7623779" name="SFP-POA(via NH)" line="SFP-POA(via NH)" type="bus" vClass="bus" completeness="0.09">
+        <route edges="207947182 407832897 338426672 36995557"/>
+        <busStop id="297232808" name=""/>
+    </ptLine>
+    <ptLine id="7625898" name="POA-TCO(via TAQ)" line="POA-TCO(via TAQ)" type="bus" vClass="bus" completeness="0.25">
+        <route edges="36995557 27089998 472157816 27090050 447936230"/>
+        <busStop id="297232808" name=""/>
+    </ptLine>
+    <ptLine id="7625899" name="POA-TCO" line="POA-TCO" type="bus" vClass="bus" completeness="0.33">
+        <route edges="36995557 27089998 472157816 27090050 447936230"/>
+        <busStop id="297232808" name=""/>
+    </ptLine>
+    <ptLine id="7625900" name="TCO-POA(via AERO)" line="TCO-POA(via AERO)" type="bus" vClass="bus" completeness="0.20">
+        <route edges="207947182 407832897 338426672 36995557 27089998 472157816 27090050 447936230"/>
+        <busStop id="297232808" name=""/>
+    </ptLine>
+    <ptLine id="7625901" name="TCO-POA(via TAQ)" line="TCO-POA(via TAQ)" type="bus" vClass="bus" completeness="0.25">
+        <route edges="207947182 407832897 338426672 36995557"/>
+        <busStop id="297232808" name=""/>
+    </ptLine>
+    <ptLine id="7625902" name="TCO-POA" line="TCO-POA" type="bus" vClass="bus" completeness="0.33">
+        <route edges="207947182 407832897 338426672 36995557"/>
+        <busStop id="297232808" name=""/>
+    </ptLine>
+    <ptLine id="7631239" name="POA-CAN(via NP-S/D)" line="POA-CAN(via NP-S/D)" type="bus" vClass="bus" completeness="0.12">
+        <route edges="-27089998"/>
+        <busStop id="297232808" name=""/>
+    </ptLine>
+    <ptLine id="7631240" name="POA-CAN(via NP)" line="POA-CAN(via NP)" type="bus" vClass="bus" completeness="0.11">
+        <route edges="36995557 27089998 472157816 27090050 447936230"/>
+        <busStop id="297232808" name=""/>
+    </ptLine>
+    <ptLine id="7631241" name="CAN-POA(via NP)" line="CAN-POA(via NP)" type="bus" vClass="bus" completeness="0.10">
+        <route edges="207947182 407832897 338426672 36995557"/>
+        <busStop id="297232808" name=""/>
+    </ptLine>
+    <ptLine id="7697429" name="RIO-POA(via SL)" line="RIO-POA(via SL)" type="bus" vClass="bus" completeness="0.11">
+        <route edges="207947182 407832897 338426672 36995557"/>
+        <busStop id="297232808" name=""/>
+    </ptLine>
+    <ptLine id="7697432" name="POA-RIO(via SL)" line="POA-RIO(via SL)" type="bus" vClass="bus" completeness="0.08">
+        <route edges="36995557 27089998 472157816 27090050 447936230"/>
+        <busStop id="297232808" name=""/>
+    </ptLine>
+    <ptLine id="7875374" name="Norte: Mercado - Novo Hamburgo" line="1" type="subway" vClass="rail_urban" color="0,0,128" completeness="0.10">
+        <route edges="550950817"/>
+        <busStop id="5320504014" name="Rodoviária"/>
+        <busStop id="5320504005" name="São Pedro"/>
+    </ptLine>
+    <ptLine id="7886190" name="Norte: Mercado - Sapucaia" line="1" type="subway" vClass="rail_urban" color="0,0,128" completeness="0.14">
+        <route edges="550950817"/>
+        <busStop id="5320504014" name="Rodoviária"/>
+        <busStop id="5320504005" name="São Pedro"/>
+    </ptLine>
+    <ptLine id="7886191" name="Sul: Sapucaia - Mercado" line="1" type="subway" vClass="rail_urban" color="0,0,128" completeness="0.14">
+        <route edges="29209487"/>
+        <busStop id="656505163" name="São Pedro"/>
+        <busStop id="611903060" name="Rodoviária"/>
+    </ptLine>
+</ptLines>

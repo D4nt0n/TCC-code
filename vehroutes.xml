@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2022-07-14 11:37:45 by Eclipse SUMO sumo Version 1.12.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\Danton%20Moura\Sumo\2022-07-14-11-34-33\osm.net.xml"/>
+        <route-files value="C:\Users\Danton%20Moura\Sumo\2022-07-14-11-34-33\trips.trips.xml"/>
+        <additional-files value="C:\Users\Danton%20Moura\Sumo\2022-07-14-11-34-33\osm_stops.add.xml"/>
+    </input>
+
+    <output>
+        <vehroute-output value="C:\Users\Danton%20Moura\Sumo\2022-07-14-11-34-33\vehroutes.xml"/>
+        <stop-output value="C:\Users\Danton%20Moura\Sumo\2022-07-14-11-34-33\stopinfos.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+    </time>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+    </processing>
+
+    <routing>
+        <device.rerouting.adaptation-interval value="0"/>
+    </routing>
+
+    <report>
+        <aggregate-warnings value="5"/>
+        <error-log value="C:\Users\Danton%20Moura\Sumo\2022-07-14-11-34-33\trips.trips.xml.errorlog"/>
+        <no-step-log value="true"/>
+    </report>
+
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vehicle id="0_bus_173:0" type="pt_bus" depart="3.00" departLane="0" arrival="57.00">
+        <route edges="564110270#0 564110270#1"/>
+    </vehicle>
+
+    <vehicle id="20_bus_10.7:1" type="pt_bus" depart="102.00" departLane="0" arrival="111.00">
+        <route edges="926832644"/>
+    </vehicle>
+
+    <vehicle id="30_bus_10.3:1" type="pt_bus" depart="137.00" departLane="0" arrival="146.00">
+        <route edges="926832644"/>
+    </vehicle>
+
+    <vehicle id="34_bus_10.52:1" type="pt_bus" depart="158.00" departLane="0" arrival="167.00">
+        <route edges="926832644"/>
+    </vehicle>
+
+    <vehicle id="36_bus_10.51:1" type="pt_bus" depart="160.00" departLane="1" arrival="169.00">
+        <route edges="926832644"/>
+    </vehicle>
+
+    <vehicle id="38_bus_10.5:1" type="pt_bus" depart="160.00" departLane="2" arrival="169.00">
+        <route edges="926832644"/>
+    </vehicle>
+
+    <vehicle id="1_bus_173:1" type="pt_bus" depart="6.00" departLane="0" arrival="212.00">
+        <route edges="203195780#0 203195780#1 203195780#2 203195780#3 203195780#4 203195780#5 451653416 451653417#0 451653417#1"/>
+        <stop busStop="2020491294" duration="30.00"/>
+        <stop busStop="2019753911" duration="30.00"/>
+        <stop busStop="2020491290" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="12_bus_:1" type="pt_bus" depart="55.00" departLane="0" arrival="215.00">
+        <route edges="36995557 27089998 472157816 27090050 447936230"/>
+        <stop busStop="297232808" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="2_bus_282:0" type="pt_bus" depart="15.00" departLane="0" arrival="217.00">
+        <route edges="203195780#0 203195780#1 203195780#2 203195780#3 203195780#4 203195780#5 451653416 451653417#0 451653417#1"/>
+    </vehicle>
+
+    <vehicle id="3_bus_282:1" type="pt_bus" depart="21.00" departLane="0" arrival="222.00">
+        <route edges="203195780#0 203195780#1 203195780#2 203195780#3 203195780#4 203195780#5 451653416 451653417#0 451653417#1"/>
+        <stop busStop="2020491300" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="51_bus_10.41:0" type="pt_bus" depart="228.00" departLane="0" arrival="237.00">
+        <route edges="926832644"/>
+    </vehicle>
+
+    <vehicle id="7_bus_:0" type="pt_bus" depart="28.00" departLane="2" arrival="259.00">
+        <route edges="207947182 407832897 338426672 36995557"/>
+        <stop busStop="297232808" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="54_bus_10.4:1" type="pt_bus" depart="253.00" departLane="0" arrival="262.00">
+        <route edges="926832644"/>
+    </vehicle>
+
+    <vehicle id="8_subway_1:0" type="pt_subway" depart="38.00" departLane="0" arrival="298.00">
+        <route edges="29209487"/>
+        <stop busStop="656505163" duration="30.00"/>
+        <stop busStop="611903060" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="107_bus_:3" type="pt_bus" depart="522.00" departLane="0" arrival="681.00">
+        <route edges="36995557 27089998 472157816 27090050 447936230"/>
+        <stop busStop="297232808" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="108_bus_POA-SFP(via_NH):0" type="pt_bus" depart="527.00" departLane="0" arrival="719.00">
+        <route edges="36995557 27089998 472157816 27090050 447936230"/>
+        <stop busStop="297232808" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="110_bus_POA-TCO(via_TAQ):0" type="pt_bus" depart="535.00" departLane="0" arrival="758.00">
+        <route edges="36995557 27089998 472157816 27090050 447936230"/>
+        <stop busStop="297232808" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="115_bus_POA-CAN(via_NP-S/D):0" type="pt_bus" depart="565.00" departLane="0" arrival="771.00">
+        <route edges="36995557"/>
+        <stop busStop="297232808" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="111_bus_POA-TCO:0" type="pt_bus" depart="541.00" departLane="0" arrival="796.00">
+        <route edges="36995557 27089998 472157816 27090050 447936230"/>
+        <stop busStop="297232808" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="120_subway_1:1" type="pt_subway" depart="593.00" departLane="0" arrival="836.00">
+        <route edges="550950817"/>
+        <stop busStop="5320504014" duration="30.00"/>
+        <stop busStop="5320504005" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="121_subway_1:2" type="pt_subway" depart="608.00" departLane="0" arrival="844.00">
+        <route edges="550950817"/>
+        <stop busStop="5320504014" duration="30.00"/>
+        <stop busStop="5320504005" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="122_subway_1:3" type="pt_subway" depart="598.00" departLane="0" arrival="858.00">
+        <route edges="29209487"/>
+        <stop busStop="656505163" duration="30.00"/>
+        <stop busStop="611903060" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="116_bus_POA-CAN(via_NP):0" type="pt_bus" depart="572.00" departLane="0" arrival="873.00">
+        <route edges="36995557 27089998 472157816 27090050 447936230"/>
+        <stop busStop="297232808" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="106_bus_:2" type="pt_bus" depart="517.00" departLane="2" arrival="887.00">
+        <route edges="207947182 407832897 338426672 36995557"/>
+        <stop busStop="297232808" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="119_bus_POA-RIO(via_SL):0" type="pt_bus" depart="583.00" departLane="0" arrival="912.00">
+        <route edges="36995557 27089998 472157816 27090050 447936230"/>
+        <stop busStop="297232808" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="109_bus_SFP-POA(via_NH):0" type="pt_bus" depart="525.00" departLane="2" arrival="924.00">
+        <route edges="207947182 407832897 338426672 36995557"/>
+        <stop busStop="297232808" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="113_bus_TCO-POA(via_TAQ):0" type="pt_bus" depart="553.00" departLane="2" arrival="1001.00">
+        <route edges="207947182 407832897 338426672 36995557"/>
+        <stop busStop="297232808" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="112_bus_TCO-POA(via_AERO):0" type="pt_bus" depart="547.00" departLane="2" arrival="1026.00">
+        <route edges="207947182 407832897 338426672 36995557 27089998 472157816 27090050 447936230"/>
+        <stop busStop="297232808" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="114_bus_TCO-POA:0" type="pt_bus" depart="561.00" departLane="2" arrival="1039.00">
+        <route edges="207947182 407832897 338426672 36995557"/>
+        <stop busStop="297232808" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="117_bus_CAN-POA(via_NP):0" type="pt_bus" depart="574.00" departLane="2" arrival="1077.00">
+        <route edges="207947182 407832897 338426672 36995557"/>
+        <stop busStop="297232808" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="118_bus_RIO-POA(via_SL):0" type="pt_bus" depart="582.00" departLane="2" arrival="1115.00">
+        <route edges="207947182 407832897 338426672 36995557"/>
+        <stop busStop="297232808" duration="30.00"/>
+    </vehicle>
+
+</routes>

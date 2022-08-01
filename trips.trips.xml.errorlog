@@ -1,0 +1,15 @@
+Warning: At actuated tlLogic '2527526602', actuated phase 2 has no controlling detector.
+Warning: At actuated tlLogic '2912095255', actuated phase 0 has no controlling detector.
+Warning: At actuated tlLogic '314671981', actuated phase 0 has no controlling detector.
+Warning: At actuated tlLogic '981329142', actuated phase 0 has no controlling detector.
+Warning: At actuated tlLogic 'GS_445837028', actuated phase 3 has no controlling detector.
+Warning: At actuated tlLogic 'cluster_2283194569_2283194571_2283194580_2283194581_5423616663_5423616664_5423711703_5423711704', linkIndex 4 has no controlling detector.
+Warning: At actuated tlLogic 'cluster_2283194569_2283194571_2283194580_2283194581_5423616663_5423616664_5423711703_5423711704', linkIndex 5 has no controlling detector.
+Warning: At actuated tlLogic 'cluster_2283194569_2283194571_2283194580_2283194581_5423616663_5423616664_5423711703_5423711704', linkIndex 6 has no controlling detector.
+Warning: At actuated tlLogic 'cluster_2283194569_2283194571_2283194580_2283194581_5423616663_5423616664_5423711703_5423711704', linkIndex 7 has no controlling detector.
+Warning: At actuated tlLogic 'cluster_2283194569_2283194571_2283194580_2283194581_5423616663_5423616664_5423711703_5423711704', linkIndex 14 has no controlling detector.
+Warning: busStop '2020491300' on lane '451653416_0' is too short for vehicle '3_bus_282:1'.
+Warning: Vehicle '5_bus_186:0' is not allowed to stop on lane '358444459#2_0'.
+Warning: Vehicle '5_bus_186:0' is not allowed to depart on any lane of edge '358444459#2'.
+Warning: 21 total messages of type: At actuated tlLogic '%', actuated phase % has no controlling detector.
+Warning: 68 total messages of type: At actuated tlLogic '%', linkIndex % has no controlling detector.

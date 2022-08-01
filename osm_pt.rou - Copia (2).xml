@@ -1,0 +1,83 @@
+<?xml version="1.0" ?><!-- generated on 2022-07-14 11:37:48.520117 by $Id: ptlines2flows.py v1_3_1+0313-ccb31df3eb jakob.erdmann@dlr.de 2019-09-02 13:26:32 +0200 $ v1_12_0+0000-800cb422fa4
+  options: 
+--><routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="pt_bus" vClass="bus" guiShape="bus"/>
+    <vType id="pt2_bus" length="17.90" vClass="bus" guiShape="bus/flexible" height="3.00" personCapacity="150"/>
+    
+    <vType id="pt_tram" vClass="tram"/>
+    <vType id="pt_train" vClass="rail"/>
+    <vType id="pt_subway" vClass="rail_urban"/>
+    <vType id="pt_light_rail" vClass="rail_urban"/>
+    <vType id="pt_monorail" vClass="rail"/>
+    <vType id="pt_trolleybus" vClass="bus"/>
+    <vType id="pt_minibus" vClass="bus"/>
+    <vType id="pt_share_taxi" vClass="taxi"/>
+    <vType id="pt_aerialway" vClass="bus"/>
+    <vType id="pt_ferry" vClass="ship"/>
+    
+    <flow id="BRT" type="pt2_bus" line="bus" begin="0" from="208352988" to="785755603" end="100" number="9">
+        <stop busStop="P1_Salgado" duration="60"/>
+        <stop busStop="P1_Avai" duration="20"/>
+        <stop busStop="P1_Loureiro" duration="20"/>
+        <stop busStop="P1_Ponte_Pedra" duration="20"/>
+        <stop busStop="P1_Borges" duration="20"/>
+        <stop busStop="P2_Borges" duration="20"/>
+        <stop busStop="P3_Borges" duration="20"/>
+        <stop busStop="P4_Borges" duration="20"/>
+        <stop busStop="P1_Padre_Cacique" duration="20"/>
+        <stop busStop="P2_Padre_Cacique" duration="20"/>
+        <stop busStop="P3_Padre_Cacique" duration="20"/>
+        <stop busStop="P1_Icarai" duration="20"/>
+    </flow>
+    
+
+
+  <!--   <personFlow id="personFlow_0" begin="0" end="800" number="800">
+        <walk from="612442387" busStop="P1_Salgado"/>
+        <ride busStop="P1_Icarai" lines="bus"/>
+        <walk to="785755603"/> 
+    </personFlow>
+    <personFlow id="personFlow_1" begin="0" end="1000" number="100">
+        <walk from="27882403#0" busStop="P1_Avai"/>
+        <ride busStop="P1_Icarai" lines="bus"/>
+        <walk to="785755603"/> 
+    </personFlow>
+    <personFlow id="personFlow_2" begin="0" end="1100" number="100">
+        <walk from="562621055" busStop="P1_Loureiro"/>
+        <ride busStop="P1_Icarai" lines="bus"/>
+        <walk to="785755603"/> 
+    </personFlow>
+    <personFlow id="personFlow_3" begin="0" end="1200" number="100">
+        <walk from="244765838" busStop="P1_Ponte_Pedra"/>
+        <ride busStop="P1_Icarai" lines="bus"/>
+        <walk to="785755603"/> 
+    </personFlow>
+    <personFlow id="personFlow_4" begin="0" end="1300" number="200">
+        <walk from="451652908#2" busStop="P1_Borges"/>
+        <ride busStop="P1_Icarai" lines="bus"/>
+        <walk to="785755603"/> 
+    </personFlow>
+    <personFlow id="personFlow_5" begin="0" end="1400" number="200">
+        <walk from="927790174#1" busStop="P2_Borges"/>
+        <ride busStop="P1_Icarai" lines="bus"/>
+        <walk to="785755603"/> 
+    </personFlow>
+    <personFlow id="personFlow_6" begin="0" end="1500" number="200">
+        <walk from="112414431#0" busStop="P3_Borges"/>
+        <ride busStop="P1_Icarai" lines="bus"/>
+        <walk to="785755603"/> 
+    </personFlow>
+    <personFlow id="personFlow_7" begin="0" end="1600" number="100">
+        <walk from="108664532#1" busStop="P4_Borges"/>
+        <ride busStop="P1_Icarai" lines="bus"/>
+        <walk to="785755603"/> 
+    </personFlow>
+ -->
+
+
+    <!-- <personFlow id="personFlow_1" begin="0" end="800" number="400">
+        <walk from="451653095" busStop="P2_Salgado"/>
+        <ride busStop="P1_Icarai" lines="bus"/>
+        <walk to="785755603"/> 
+    </personFlow> -->
+</routes>

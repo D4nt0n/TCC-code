@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generated on 2022-07-14 11:37:37.979144 by $Id: ptlines2flows.py v1_3_1+0313-ccb31df3eb jakob.erdmann@dlr.de 2019-09-02 13:26:32 +0200 $ v1_12_0+0000-800cb422fa4
+  options: 
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="pt_bus" vClass="bus" speedFactor="0.95"/>
+    <vType id="pt_tram" vClass="tram" speedFactor="1.0"/>
+    <vType id="pt_train" vClass="rail"/>
+    <vType id="pt_subway" vClass="rail_urban"/>
+    <vType id="pt_light_rail" vClass="rail_urban"/>
+    <vType id="pt_monorail" vClass="rail"/>
+    <vType id="pt_trolleybus" vClass="bus" speedFactor="0.95"/>
+    <vType id="pt_minibus" vClass="bus" speedFactor="0.95"/>
+    <vType id="pt_share_taxi" vClass="taxi" speedFactor="0.95"/>
+    <vType id="pt_aerialway" vClass="bus"/>
+    <vType id="pt_ferry" vClass="ship"/>
+    <trip id="0_bus_173:0" type="pt_bus" depart="3" departLane="best" from="564110270#0" to="564110270#1">
+    </trip>
+    <trip id="1_bus_173:1" type="pt_bus" depart="6" departLane="best" from="203195780#0" to="451653417#1">
+        <stop busStop="2020491294" duration="30"/>
+        <stop busStop="2019753911" duration="30"/>
+        <stop busStop="2020491290" duration="30"/>
+    </trip>
+    <trip id="2_bus_282:0" type="pt_bus" depart="15" departLane="best" from="203195780#0" to="451653417#1">
+    </trip>
+    <trip id="3_bus_282:1" type="pt_bus" depart="15" departLane="best" from="203195780#0" to="451653417#1">
+        <stop busStop="2020491300" duration="30"/>
+    </trip>
+    <trip id="5_bus_186:0" type="pt_bus" depart="19" departLane="best" from="358444459#2" to="358444459#2">
+        <stop busStop="1285386828" duration="30"/>
+    </trip>
+    <trip id="7_bus_:0" type="pt_bus" depart="28" departLane="best" from="207947182" to="36995557">
+        <stop busStop="297232808" duration="30"/>
+    </trip>
+    <trip id="8_subway_1:0" type="pt_subway" depart="38" departLane="best" from="29209487" to="29209487">
+        <stop busStop="656505163" duration="30"/>
+        <stop busStop="611903060" duration="30"/>
+    </trip>
+    <trip id="12_bus_:1" type="pt_bus" depart="55" departLane="best" from="36995557" to="447936230">
+        <stop busStop="297232808" duration="30"/>
+    </trip>
+    <trip id="20_bus_10.7:1" type="pt_bus" depart="102" departLane="best" from="926832644" to="926832644">
+    </trip>
+    <trip id="30_bus_10.3:1" type="pt_bus" depart="137" departLane="best" from="926832644" to="926832644">
+    </trip>
+    <trip id="34_bus_10.52:1" type="pt_bus" depart="158" departLane="best" from="926832644" to="926832644">
+    </trip>
+    <trip id="36_bus_10.51:1" type="pt_bus" depart="160" departLane="best" from="926832644" to="926832644">
+    </trip>
+    <trip id="38_bus_10.5:1" type="pt_bus" depart="160" departLane="best" from="926832644" to="926832644">
+    </trip>
+    <trip id="51_bus_10.41:0" type="pt_bus" depart="228" departLane="best" from="926832644" to="926832644">
+    </trip>
+    <trip id="54_bus_10.4:1" type="pt_bus" depart="253" departLane="best" from="926832644" to="926832644">
+    </trip>
+    <trip id="106_bus_:2" type="pt_bus" depart="517" departLane="best" from="207947182" to="36995557">
+        <stop busStop="297232808" duration="30"/>
+    </trip>
+    <trip id="107_bus_:3" type="pt_bus" depart="522" departLane="best" from="36995557" to="447936230">
+        <stop busStop="297232808" duration="30"/>
+    </trip>
+    <trip id="108_bus_POA-SFP(via_NH):0" type="pt_bus" depart="525" departLane="best" from="36995557" to="447936230">
+        <stop busStop="297232808" duration="30"/>
+    </trip>
+    <trip id="109_bus_SFP-POA(via_NH):0" type="pt_bus" depart="525" departLane="best" from="207947182" to="36995557">
+        <stop busStop="297232808" duration="30"/>
+    </trip>
+    <trip id="110_bus_POA-TCO(via_TAQ):0" type="pt_bus" depart="535" departLane="best" from="36995557" to="447936230">
+        <stop busStop="297232808" duration="30"/>
+    </trip>
+    <trip id="111_bus_POA-TCO:0" type="pt_bus" depart="538" departLane="best" from="36995557" to="447936230">
+        <stop busStop="297232808" duration="30"/>
+    </trip>
+    <trip id="112_bus_TCO-POA(via_AERO):0" type="pt_bus" depart="547" departLane="best" from="207947182" to="447936230">
+        <stop busStop="297232808" duration="30"/>
+    </trip>
+    <trip id="113_bus_TCO-POA(via_TAQ):0" type="pt_bus" depart="548" departLane="best" from="207947182" to="36995557">
+        <stop busStop="297232808" duration="30"/>
+    </trip>
+    <trip id="114_bus_TCO-POA:0" type="pt_bus" depart="561" departLane="best" from="207947182" to="36995557">
+        <stop busStop="297232808" duration="30"/>
+    </trip>
+    <trip id="115_bus_POA-CAN(via_NP-S/D):0" type="pt_bus" depart="565" departLane="best" from="36995557" to="36995557">
+        <stop busStop="297232808" duration="30"/>
+    </trip>
+    <trip id="116_bus_POA-CAN(via_NP):0" type="pt_bus" depart="572" departLane="best" from="36995557" to="447936230">
+        <stop busStop="297232808" duration="30"/>
+    </trip>
+    <trip id="117_bus_CAN-POA(via_NP):0" type="pt_bus" depart="574" departLane="best" from="207947182" to="36995557">
+        <stop busStop="297232808" duration="30"/>
+    </trip>
+    <trip id="118_bus_RIO-POA(via_SL):0" type="pt_bus" depart="582" departLane="best" from="207947182" to="36995557">
+        <stop busStop="297232808" duration="30"/>
+    </trip>
+    <trip id="119_bus_POA-RIO(via_SL):0" type="pt_bus" depart="583" departLane="best" from="36995557" to="447936230">
+        <stop busStop="297232808" duration="30"/>
+    </trip>
+    <trip id="120_subway_1:1" type="pt_subway" depart="593" departLane="best" from="550950817" to="550950817">
+        <stop busStop="5320504014" duration="30"/>
+        <stop busStop="5320504005" duration="30"/>
+    </trip>
+    <trip id="121_subway_1:2" type="pt_subway" depart="597" departLane="best" from="550950817" to="550950817">
+        <stop busStop="5320504014" duration="30"/>
+        <stop busStop="5320504005" duration="30"/>
+    </trip>
+    <trip id="122_subway_1:3" type="pt_subway" depart="598" departLane="best" from="29209487" to="29209487">
+        <stop busStop="656505163" duration="30"/>
+        <stop busStop="611903060" duration="30"/>
+    </trip>
+</routes>
