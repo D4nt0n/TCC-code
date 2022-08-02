@@ -34,31 +34,31 @@
 
     <vehicle id="BRT1" type="pt2_bus" route="Salgado-PadreCacique" depart="0" line="bus">
     </vehicle>
-    <vehicle id="BRT2" type="pt2_bus" route="Salgado-PadreCacique" depart="300" line="bus">
+    <vehicle id="BRT2" type="pt2_bus" route="Salgado-PadreCacique" depart="320" line="bus">
     </vehicle>
-    <vehicle id="BRT3" type="pt2_bus" route="Salgado-PadreCacique" depart="600" line="bus">
+    <vehicle id="BRT3" type="pt2_bus" route="Salgado-PadreCacique" depart="640" line="bus">
     </vehicle>
-    <vehicle id="BRT4" type="pt2_bus" route="Salgado-PadreCacique" depart="900" line="bus">
+    <vehicle id="BRT4" type="pt2_bus" route="Salgado-PadreCacique" depart="960" line="bus">
     </vehicle>
-    <vehicle id="BRT5" type="pt2_bus" route="Salgado-PadreCacique" depart="1200" line="bus">
+    <!--<vehicle id="BRT5" type="pt2_bus" route="Salgado-PadreCacique" depart="1240" line="bus">
     </vehicle>
-    <vehicle id="BRT6" type="pt2_bus" route="Salgado-PadreCacique" depart="1500" line="bus">
+    <vehicle id="BRT6" type="pt2_bus" route="Salgado-PadreCacique" depart="1550" line="bus">
     </vehicle>
-    <vehicle id="BRT7" type="pt2_bus" route="Salgado-PadreCacique" depart="1800" line="bus">
+    <vehicle id="BRT7" type="pt2_bus" route="Salgado-PadreCacique" depart="1860" line="bus">
     </vehicle>
-    <vehicle id="BRT8" type="pt2_bus" route="Salgado-PadreCacique" depart="2100" line="bus">
+    <vehicle id="BRT8" type="pt2_bus" route="Salgado-PadreCacique" depart="2170" line="bus">
     </vehicle>
-    <vehicle id="BRT9" type="pt2_bus" route="Salgado-PadreCacique" depart="2400" line="bus">
+    <vehicle id="BRT9" type="pt2_bus" route="Salgado-PadreCacique" depart="2480" line="bus">
     </vehicle>
-    <vehicle id="BRT10" type="pt2_bus" route="Salgado-PadreCacique" depart="2700" line="bus">
-    </vehicle>
+    <vehicle id="BRT10" type="pt2_bus" route="Salgado-PadreCacique" depart="2790" line="bus">
+    </vehicle> -->
 
-    <personFlow id="personFlow_0" begin="0" end="800" number="800">
+    <personFlow id="personFlow_0" begin="0" end="900" number="800">
         <walk from="612442387" busStop="P1_Salgado"/>
         <ride busStop="P1_Icarai" lines="bus"/>
         <walk to="785755603"/> 
     </personFlow>
-    <personFlow id="personFlow_1" begin="0" end="1000" number="100">
+    <!-- <personFlow id="personFlow_1" begin="0" end="1000" number="100">
         <walk from="27882403#0" busStop="P1_Avai"/>
         <ride busStop="P1_Icarai" lines="bus"/>
         <walk to="785755603"/> 
@@ -92,5 +92,5 @@
         <walk from="108664532#1" busStop="P4_Borges"/>
         <ride busStop="P1_Icarai" lines="bus"/>
         <walk to="785755603"/> 
-    </personFlow>
+    </personFlow> -->
 </routes>

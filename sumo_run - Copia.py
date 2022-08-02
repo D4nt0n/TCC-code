@@ -28,10 +28,9 @@ packBigData = []
 packOutputData = []
 emissions_total = 0
 j = 0
-for j in range(2):
+for j in range(3):
     # Initialize total_simulation as zero
     total_simulation = 0
-
 
     # Access route xml file
     tree = ET.parse("osm_pt.rou.xml")
@@ -78,57 +77,49 @@ for j in range(2):
                     occupation = 0
                     percentage = 0
                     stopstate = traci.vehicle.getStopState(vehicles[i])
-                    #print(stopstate)
+                    # print(stopstate)
                     if stopstate == 17:
                         occupation = round(traci.vehicle.getPersonNumber(vehicles[i]), 2)
-                        #print(capacity)
+                        # print(capacity)
                         capacity = round(traci.vehicle.getPersonCapacity(vehicles[i]), 2)
-                        #print(occupation)
+                        # print(occupation)
                         if capacity != 0:
                             percentage = occupation / capacity
-                            print(percentage)
+                            # print(percentage)
                         else:
                             percentage = 'nan'
-                    #print(capacity, occupation, percentage)
                     # Depart time and later get with unique from list
                     vehicle_depart = traci.simulation.getDepartedIDList()
-                    #print(vehicle_depart)
-                    #print(vehid)
                     k = 0
                     departure_time = 0
                     for k in range(0, len(vehicle_depart)):
                         if vehicle_depart[k] == vehid:
-                                departure_time = traci.simulation.getTime()
-                                print(departure_time)
+                            departure_time = traci.simulation.getTime()
+                            # print(departure_time)
                         else:
-                                departure_time = 'nan'
-                    #print(departure_time)
+                            departure_time = 'nan'
                     # Packing of all the data for export to CSV/XLSX
                     vehList = [j, vehid, spd, displacement, emissions, departure_time, capacity, occupation, percentage]
 
                     # print(vehList)
-
-                    '''print("Vehicle: ", vehicles[i], " at datetime: ", getdatetime())
-                    print(vehicles[i], " Speed: ", round(traci.vehicle.getSpeed(vehicles[i])*3.6,2), "km/h |", \
-                                          #Returns the distance to the starting point like an odometer.
-                                           " Distance: ", round(traci.vehicle.getDistance(vehicles[i]),2), "m |", \
-                                          #Returns the CO2 emission in mg/s.
-                                           " CO2Emission ", round(traci.vehicle.getCO2Emission(vehicles[i]),2), " mg/s")'''
                     packBigDataLine = flatten_list([vehList])
                     packBigData.append(packBigDataLine)
     traci.close()
 
     columnnames = ['simu', 'vehid', 'spd', 'displacement', 'CO2 emission', 'Time', 'Capacity', 'Occupation', 'percentage']
     dataset = pd.DataFrame(packBigData, index=None, columns=columnnames)
-    dataset.to_excel("output.xlsx", index=False)
-    displacement = dataset.groupby(['simu', 'vehid'])['displacement'].last().sum()
-    displacement.to_excel("output3.xlsx", index=True)
-    total_occupation = dataset.groupby('simu')['percentage'].mean()
+    dataset.to_excel("output2.xlsx", index=False)
+    # displacement = dataset.groupby(['simu', 'vehid'])['displacement'].last()
+    '''displacement.to_excel("output3.xlsx", index=False)'''
+    total_occupation = dataset.groupby('simu', as_index=False)['percentage'].mean()
+    total_simulation = dataset.groupby('simu', as_index=False)['CO2 emission'].sum()
+    total = pd.merge(total_simulation, total_occupation, on='simu', how='inner')
+    # for index, row in df.iterrows:
+
     # Solve problem of columns percentage
-    total_occupation.to_excel("output3.xlsx", index=False)
+    total.to_excel("output4.xlsx", index=False)
 
 
-    #total_simulation = dataset.groupby('simu')['CO2 emission'].sum().last()/1000
     '''total_distance = jow['displacement'].sum()
     print(total_distance)'''
     SimulationsList = [j, total_simulation, displacement, total_occupation]
@@ -138,7 +129,7 @@ for j in range(2):
 
 columnnames2 = ['Number of Buses', ' Total CO2 emission (kgCO2e)', 'total displacement (m)', 'total occupation']
 dataset2 = pd.DataFrame(packSimulationsData, index=None, columns=columnnames2)
-dataset2.to_excel("output2.xlsx", index=False)
+dataset2.to_excel("output.xlsx", index=False)
 time.sleep(5)
 
 

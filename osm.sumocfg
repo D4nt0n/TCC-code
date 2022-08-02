@@ -13,9 +13,9 @@
     </input>
 	
     <output> 
-	<netstate-dump value="test_dump.xml"/> 
+	<!-- <netstate-dump value="test_dump.xml"/> 
 	<emission-output value="my_emission_file.xml"/>
-	<tripinfo-output value="trip_info_output.xml"/>
+	<tripinfo-output value="trip_info_output.xml"/> -->
     </output>
 
     <processing>
