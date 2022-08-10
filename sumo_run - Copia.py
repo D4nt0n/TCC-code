@@ -26,9 +26,10 @@ def flatten_list(_2d_list):
 packSimulationsData = []
 packBigData = []
 packOutputData = []
+dataset = []
 emissions_total = 0
 j = 0
-for j in range(3):
+for j in range(5):
     # Initialize total_simulation as zero
     total_simulation = 0
 
@@ -38,11 +39,11 @@ for j in range(3):
     # Get the list of vehicles in route xml file
     vehicles = tree.getElementsByTagName("vehicle")
     # print(vehicles)
-    vehicle_depart = 0
+    vehicle_depart = 0 + j * 10
 
     # For each vehicle in route xml file determine its depart
     for vehicle in vehicles:
-        vehicle_depart_coefficient = j * 10
+        vehicle_depart_coefficient = j * 20
         # print(vehicle.getAttribute("id"))
         vehicle.setAttribute("depart", str(vehicle_depart))
         # print(vehicle.getAttribute("depart"))
@@ -64,10 +65,6 @@ for j in range(3):
 
             for i in range(0,len(vehicles)):
 
-                    #Function descriptions
-                    #https://sumo.dlr.de/docs/TraCI/Vehicle_Value_Retrieval.html
-                    #https://sumo.dlr.de/pydoc/traci._vehicle.html#VehicleDomain-getSpeed
-
                     # Get differents values of each vehicle at every steptime
                     vehid = vehicles[i]
                     spd = round(traci.vehicle.getSpeed(vehicles[i])*3.6,2)
@@ -77,17 +74,21 @@ for j in range(3):
                     occupation = 0
                     percentage = 0
                     stopstate = traci.vehicle.getStopState(vehicles[i])
-                    # print(stopstate)
-                    if stopstate == 17:
-                        occupation = round(traci.vehicle.getPersonNumber(vehicles[i]), 2)
-                        # print(capacity)
-                        capacity = round(traci.vehicle.getPersonCapacity(vehicles[i]), 2)
-                        # print(occupation)
-                        if capacity != 0:
-                            percentage = occupation / capacity
-                            # print(percentage)
-                        else:
-                            percentage = 'nan'
+                    stop = []
+                    '''
+                        print(stop)'''
+                    bus_stopped = traci.busstop.getVehicleIDs("P3_Padre_Cacique")
+                    if bus_stopped != ():
+                    # print(stop)
+                        print(bus_stopped)
+                        for vehicle in bus_stopped:
+                            occupation = round(traci.vehicle.getPersonNumber(vehicles[i]), 2)
+                            capacity = round(traci.vehicle.getPersonCapacity(vehicles[i]), 2)
+                            if capacity != 0:
+                                percentage = occupation / capacity
+                                print(percentage)
+                            else:
+                                percentage = 'nan'
                     # Depart time and later get with unique from list
                     vehicle_depart = traci.simulation.getDepartedIDList()
                     k = 0
@@ -95,41 +96,39 @@ for j in range(3):
                     for k in range(0, len(vehicle_depart)):
                         if vehicle_depart[k] == vehid:
                             departure_time = traci.simulation.getTime()
-                            # print(departure_time)
                         else:
                             departure_time = 'nan'
                     # Packing of all the data for export to CSV/XLSX
                     vehList = [j, vehid, spd, displacement, emissions, departure_time, capacity, occupation, percentage]
-
-                    # print(vehList)
                     packBigDataLine = flatten_list([vehList])
                     packBigData.append(packBigDataLine)
     traci.close()
 
     columnnames = ['simu', 'vehid', 'spd', 'displacement', 'CO2 emission', 'Time', 'Capacity', 'Occupation', 'percentage']
     dataset = pd.DataFrame(packBigData, index=None, columns=columnnames)
-    dataset.to_excel("output2.xlsx", index=False)
-    # displacement = dataset.groupby(['simu', 'vehid'])['displacement'].last()
-    '''displacement.to_excel("output3.xlsx", index=False)'''
-    total_occupation = dataset.groupby('simu', as_index=False)['percentage'].mean()
-    total_simulation = dataset.groupby('simu', as_index=False)['CO2 emission'].sum()
-    total = pd.merge(total_simulation, total_occupation, on='simu', how='inner')
-    # for index, row in df.iterrows:
+dataset.to_excel("output.xlsx", index=False)
+# displacement = dataset.groupby(['simu', 'vehid'])['displacement'].last()
+'''displacement.to_excel("output2.xlsx", index=False)'''
+occupation_veh = dataset.groupby(['simu', 'vehid'], as_index=False)['percentage'].max()
+occupation_veh.to_excel("output2.xlsx", index=False)
+total_occupation = occupation_veh.groupby('simu', as_index=False)['percentage'].mean()
+print(total_occupation)
+total_simulation = dataset.groupby('simu', as_index=False)['CO2 emission'].sum()
+total = pd.merge(total_simulation, total_occupation, on='simu', how='inner')
+total.to_excel("output3.xlsx", index=False)
+# Solve problem of columns percentage
 
-    # Solve problem of columns percentage
-    total.to_excel("output4.xlsx", index=False)
 
+'''total_distance = jow['displacement'].sum()
+print(total_distance)'''
+# SimulationsList = [j, total_simulation, displacement, total_occupation]
 
-    '''total_distance = jow['displacement'].sum()
-    print(total_distance)'''
-    SimulationsList = [j, total_simulation, displacement, total_occupation]
+# packSimulationsDataLine = flatten_list([SimulationsList])
+# packSimulationsData.append(packSimulationsDataLine)
 
-    packSimulationsDataLine = flatten_list([SimulationsList])
-    packSimulationsData.append(packSimulationsDataLine)
-
-columnnames2 = ['Number of Buses', ' Total CO2 emission (kgCO2e)', 'total displacement (m)', 'total occupation']
+'''columnnames2 = ['Number of Buses', ' Total CO2 emission (kgCO2e)', 'total displacement (m)', 'total occupation']
 dataset2 = pd.DataFrame(packSimulationsData, index=None, columns=columnnames2)
-dataset2.to_excel("output.xlsx", index=False)
+dataset2.to_excel("output.xlsx", index=False)'''
 time.sleep(5)
 
 
