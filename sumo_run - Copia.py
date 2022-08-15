@@ -1,3 +1,5 @@
+from typing import List
+
 import traci
 import time
 import traci.constants as tc
@@ -6,12 +8,16 @@ import datetime
 from random import randrange
 import pandas as pd
 import xml.dom.minidom as ET
+from scipy.optimize import minimize
+import numpy as np
+
 
 def getdatetime():
-        utc_now = pytz.utc.localize(datetime.datetime.utcnow())
-        currentDT = utc_now.astimezone(pytz.timezone("Asia/Singapore"))
-        DATIME = currentDT.strftime("%Y-%m-%d %H:%M:%S")
-        return DATIME
+    utc_now = pytz.utc.localize(datetime.datetime.utcnow())
+    currentDT = utc_now.astimezone(pytz.timezone("Asia/Singapore"))
+    DATIME = currentDT.strftime("%Y-%m-%d %H:%M:%S")
+    return DATIME
+
 
 def flatten_list(_2d_list):
     flat_list = []
@@ -23,32 +29,25 @@ def flatten_list(_2d_list):
             flat_list.append(element)
     return flat_list
 
-packSimulationsData = []
-packBigData = []
-packOutputData = []
-dataset = []
-emissions_total = 0
-j = 0
-for j in range(5):
-    # Initialize total_simulation as zero
-    total_simulation = 0
 
+def danton(vehi_depart):
+    packBigData = []
+    packPersonsData = []
+    packTimeData = []
+    # Initialize total_simulation as zero
     # Access route xml file
     tree = ET.parse("osm_pt.rou.xml")
 
     # Get the list of vehicles in route xml file
     vehicles = tree.getElementsByTagName("vehicle")
     # print(vehicles)
-    vehicle_depart = 0 + j * 10
-
+    i = 0
     # For each vehicle in route xml file determine its depart
     for vehicle in vehicles:
-        vehicle_depart_coefficient = j * 20
-        # print(vehicle.getAttribute("id"))
-        vehicle.setAttribute("depart", str(vehicle_depart))
+        depart = vehi_depart[i]
+        vehicle.setAttribute("depart", str(depart))
         # print(vehicle.getAttribute("depart"))
-        vehicle_depart = vehicle_depart + vehicle_depart_coefficient + 300
-
+        i = i + 1
     with open("osm_pt.rou.xml", "w") as fs:
         fs.write(tree.toxml())
         fs.close()
@@ -56,106 +55,108 @@ for j in range(5):
     # Open sumo and start traci
     sumoCmd = ["sumo", "-c", "osm.sumocfg"]
     traci.start(sumoCmd)
-
+    not_attended_people = 0
     # Run every step time until the simulation is over
     while traci.simulation.getMinExpectedNumber() > 0:
 
-            traci.simulationStep()
-            vehicles = traci.vehicle.getIDList()
+        traci.simulationStep()
 
-            for i in range(0,len(vehicles)):
+        people_at_stop = traci.busstop.getPersonIDs("P1_Salgado")
+        vehicles = traci.vehicle.getIDList()
 
-                    # Get differents values of each vehicle at every steptime
-                    vehid = vehicles[i]
-                    spd = round(traci.vehicle.getSpeed(vehicles[i])*3.6,2)
-                    displacement = round(traci.vehicle.getDistance(vehicles[i]), 2)
-                    emissions = round(traci.vehicle.getCO2Emission(vehicles[i]),2)
-                    capacity = 0
-                    occupation = 0
-                    percentage = 0
-                    stopstate = traci.vehicle.getStopState(vehicles[i])
-                    stop = []
-                    '''
-                        print(stop)'''
-                    bus_stopped = traci.busstop.getVehicleIDs("P3_Padre_Cacique")
-                    if bus_stopped != ():
-                    # print(stop)
-                        print(bus_stopped)
-                        for vehicle in bus_stopped:
-                            occupation = round(traci.vehicle.getPersonNumber(vehicles[i]), 2)
-                            capacity = round(traci.vehicle.getPersonCapacity(vehicles[i]), 2)
-                            if capacity != 0:
-                                percentage = occupation / capacity
-                                print(percentage)
-                            else:
-                                percentage = 'nan'
-                    # Depart time and later get with unique from list
-                    vehicle_depart = traci.simulation.getDepartedIDList()
-                    k = 0
-                    departure_time = 0
-                    for k in range(0, len(vehicle_depart)):
-                        if vehicle_depart[k] == vehid:
-                            departure_time = traci.simulation.getTime()
-                        else:
-                            departure_time = 'nan'
-                    # Packing of all the data for export to CSV/XLSX
-                    vehList = [j, vehid, spd, displacement, emissions, departure_time, capacity, occupation, percentage]
-                    packBigDataLine = flatten_list([vehList])
-                    packBigData.append(packBigDataLine)
+        # Get people information
+        for i in range(0, len(people_at_stop)):
+            personid = people_at_stop[i]
+            # Get waiting time at Salgado Bus Stop
+            waiting_time = traci.person.getWaitingTime(people_at_stop[i])
+            # Pack people information
+            personsList = [personid, waiting_time]
+            packPersonsDataLine = flatten_list([personsList])
+            packPersonsData.append(packPersonsDataLine)
+        # Get vehicles information
+        for i in range(0, len(vehicles)):
+
+            # Get different values of each vehicle at every step time
+            capacity = 0
+            occupation = 0
+            percentage = 0
+            vehid = vehicles[i]
+            spd = round(traci.vehicle.getSpeed(vehicles[i]) * 3.6, 2)
+            displacement = round(traci.vehicle.getDistance(vehicles[i]), 2)
+            emissions = round(traci.vehicle.getCO2Emission(vehicles[i]), 2)
+
+            # Get list of vehicles stopped at Padre Cacique Bus Stop
+            bus_stopped = traci.busstop.getVehicleIDs("P3_Padre_Cacique")
+
+            # If clause that returns vehicles occupation percentage
+            if bus_stopped != ():
+                # print(bus_stopped)
+                occupation = round(traci.vehicle.getPersonNumber(vehicles[i]), 2)
+                capacity = round(traci.vehicle.getPersonCapacity(vehicles[i]), 2)
+                if capacity != 0:
+                    percentage = occupation / capacity
+                    # print(percentage)
+                else:
+                    percentage = 'nan'
+
+            # Get vehicle depart list
+            vehi_depart = traci.simulation.getDepartedIDList()
+            departure_time = 0
+            # Loop that get departure time of each vehicle
+            for k in range(0, len(vehi_depart)):
+                if vehi_depart[k] == vehid:
+                    departure_time = traci.simulation.getTime()
+                else:
+                    departure_time = 'nan'
+
+            # Packing of all the data for export to CSV/XLSX
+            vehList = [vehid, spd, displacement, emissions, departure_time, capacity, occupation, percentage]
+            packBigDataLine = flatten_list([vehList])
+            packBigData.append(packBigDataLine)
+            # print(traci.person.getIDCount())
+            # print(traci.vehicle.getIDCount())
+        if traci.vehicle.getIDCount() == 1:
+            not_attended_people = traci.person.getIDCount()
+            # print(not_attended_people)
     traci.close()
 
-    columnnames = ['simu', 'vehid', 'spd', 'displacement', 'CO2 emission', 'Time', 'Capacity', 'Occupation', 'percentage']
-    dataset = pd.DataFrame(packBigData, index=None, columns=columnnames)
-dataset.to_excel("output.xlsx", index=False)
-# displacement = dataset.groupby(['simu', 'vehid'])['displacement'].last()
-'''displacement.to_excel("output2.xlsx", index=False)'''
-occupation_veh = dataset.groupby(['simu', 'vehid'], as_index=False)['percentage'].max()
-occupation_veh.to_excel("output2.xlsx", index=False)
-total_occupation = occupation_veh.groupby('simu', as_index=False)['percentage'].mean()
-print(total_occupation)
-total_simulation = dataset.groupby('simu', as_index=False)['CO2 emission'].sum()
-total = pd.merge(total_simulation, total_occupation, on='simu', how='inner')
-total.to_excel("output3.xlsx", index=False)
-# Solve problem of columns percentage
+    # Vehicles information and dataframe calculations
+    column_names = ['person id', 'waiting time (s)']
+    person_dataset = pd.DataFrame(packPersonsData, index=None, columns=column_names)
+    # person_dataset.to_excel("output_persons.xlsx", index=False)
+
+    waiting_time = person_dataset.groupby('person id', as_index=False)['waiting time (s)'].max()
+    waiting_time_mean = waiting_time['waiting time (s)'].mean()
+
+    print('Average Waiting Time', waiting_time_mean, 's')
+
+    # Vehicles information and dataframe calculations
+    column_names2 = ['vehid', 'spd', 'displacement', 'CO2 emission', 'Time', 'Capacity', 'Occupation', 'percentage']
+    dataset = pd.DataFrame(packBigData, index=None, columns=column_names2)
+    # dataset.to_excel("output.xlsx", index=False)
+
+    total_emission = dataset['CO2 emission'].sum() / 1000000
+    occupation_veh = dataset.groupby('vehid', as_index=False)['percentage'].max()
+    vehicles_list = dataset['vehid'].unique()
+
+    for vehid in vehicles_list:
+        trip_time = dataset['vehid'].value_counts()[vehid]
+        trip_time_list = [vehid, trip_time]
+        packTimeDataLine = flatten_list([trip_time_list])
+        packTimeData.append(packTimeDataLine)
+
+    print(packTimeData)
+    print(occupation_veh)
+    print('Total emissions', total_emission, 'kgCO2')
+    print(total_emission + 1 * not_attended_people)
+    # print(not_attended_people)
+
+    return total_emission + 1 * not_attended_people
 
 
-'''total_distance = jow['displacement'].sum()
-print(total_distance)'''
-# SimulationsList = [j, total_simulation, displacement, total_occupation]
-
-# packSimulationsDataLine = flatten_list([SimulationsList])
-# packSimulationsData.append(packSimulationsDataLine)
-
-'''columnnames2 = ['Number of Buses', ' Total CO2 emission (kgCO2e)', 'total displacement (m)', 'total occupation']
-dataset2 = pd.DataFrame(packSimulationsData, index=None, columns=columnnames2)
-dataset2.to_excel("output.xlsx", index=False)'''
-time.sleep(5)
-
-
-
-
-
-'''oldpack = dataset['vehid'].unique()
-newpack = dataset[['vehid', 'CO2 emission']].copy()
-for i in oldpack:
-    total = newpack.loc[newpack['vehid'] == i, 'CO2 emission'].sum()
-    vehList2 = [i, total]
-    packBigDataLine = flatten_list([vehList2])
-    packVehicleData.append(packBigDataLine)
-columnnames2 = ['vehid', 'CO2 emission']
-
-dataset2 = pd.DataFrame(packVehicleData, index=None, columns=columnnames2)
-total_simulation2 = dataset2['CO2 emission'].sum()'''
-
-
-
-
-
-
-
-
-
-
-
-
-
+vehi_depart = np.array(
+    [451.21975413873713, 898.5395732294994, 1354.4056917188504, 1891.8321082210034, 2284.5327147516427,
+     2775.017475886034, 3165.855588388499, 3605.957024792705, 4062.8884708442047, 4499.1129310853485, 5183.484496760182,
+     5418.553466617771])
+print(danton(vehi_depart))
+function = minimize(danton, vehi_depart, method='Nelder-Mead')

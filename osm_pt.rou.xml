@@ -32,50 +32,48 @@
         <stop busStop="P1_Icarai" duration="20.00"/>
     </route>
 
-    <vehicle id="BRT1" type="pt2_bus" route="Salgado-PadreCacique" depart="40" line="bus">
+    <vehicle id="BRT1" type="pt2_bus" route="Salgado-PadreCacique" depart="451.21975413873713" line="bus">
     </vehicle>
-    <vehicle id="BRT2" type="pt2_bus" route="Salgado-PadreCacique" depart="420" line="bus">
+    <vehicle id="BRT2" type="pt2_bus" route="Salgado-PadreCacique" depart="898.5395732294994" line="bus">
     </vehicle>
-    <vehicle id="BRT3" type="pt2_bus" route="Salgado-PadreCacique" depart="800" line="bus">
+    <vehicle id="BRT3" type="pt2_bus" route="Salgado-PadreCacique" depart="1354.4056917188504" line="bus">
     </vehicle>
-    <vehicle id="BRT4" type="pt2_bus" route="Salgado-PadreCacique" depart="1180" line="bus">
+    <vehicle id="BRT4" type="pt2_bus" route="Salgado-PadreCacique" depart="1891.8321082210034" line="bus">
     </vehicle>
-    <vehicle id="BRT5" type="pt2_bus" route="Salgado-PadreCacique" depart="1560" line="bus">
+    <vehicle id="BRT5" type="pt2_bus" route="Salgado-PadreCacique" depart="2284.5327147516427" line="bus">
     </vehicle>
-    <vehicle id="BRT6" type="pt2_bus" route="Salgado-PadreCacique" depart="1940" line="bus">
+    <vehicle id="BRT6" type="pt2_bus" route="Salgado-PadreCacique" depart="2775.017475886034" line="bus">
     </vehicle>
-    <vehicle id="BRT7" type="pt2_bus" route="Salgado-PadreCacique" depart="2320" line="bus">
+    <vehicle id="BRT7" type="pt2_bus" route="Salgado-PadreCacique" depart="3165.855588388499" line="bus">
     </vehicle>
-    <vehicle id="BRT8" type="pt2_bus" route="Salgado-PadreCacique" depart="2700" line="bus">
+    <vehicle id="BRT8" type="pt2_bus" route="Salgado-PadreCacique" depart="3605.957024792705" line="bus">
     </vehicle>
-    <vehicle id="BRT9" type="pt2_bus" route="Salgado-PadreCacique" depart="3080" line="bus">
+    <vehicle id="BRT9" type="pt2_bus" route="Salgado-PadreCacique" depart="4062.8884708442047" line="bus">
     </vehicle>
-    <vehicle id="BRT10" type="pt2_bus" route="Salgado-PadreCacique" depart="3460" line="bus">
+     <vehicle id="BRT10" type="pt2_bus" route="Salgado-PadreCacique" depart="4499.1129310853485" line="bus">
     </vehicle>
-    <vehicle id="BRT11" type="pt2_bus" route="Salgado-PadreCacique" depart="3840" line="bus">
+     <vehicle id="BRT11" type="pt2_bus" route="Salgado-PadreCacique" depart="5183.484496760182" line="bus">
     </vehicle>
-    <vehicle id="BRT12" type="pt2_bus" route="Salgado-PadreCacique" depart="4220" line="bus">
-    </vehicle>
-    <vehicle id="BRT13" type="pt2_bus" route="Salgado-PadreCacique" depart="4600" line="bus">
+     <vehicle id="BRT12" type="pt2_bus" route="Salgado-PadreCacique" depart="5418.553466617771" line="bus">
     </vehicle>
 
-    <personFlow id="personFlow_0" begin="0" end="3000" number="1500">
+    <personFlow id="personFlow_0" begin="0" end="1800" number="366">
         <walk from="612442387" busStop="P1_Salgado"/>
         <ride busStop="P1_Icarai" lines="bus"/>
         <walk to="785755603"/> 
     </personFlow>
-    <!--
-    <personFlow id="personFlow_1" begin="0" end="1000" number="100">
-        <walk from="27882403#0" busStop="P1_Avai"/>
+    
+    <personFlow id="personFlow_1" begin="1800" end="3600" number="677">
+        <walk from="612442387" busStop="P1_Salgado"/>
         <ride busStop="P1_Icarai" lines="bus"/>
         <walk to="785755603"/> 
     </personFlow>
-    <personFlow id="personFlow_2" begin="0" end="1100" number="100">
-        <walk from="562621055" busStop="P1_Loureiro"/>
+    <personFlow id="personFlow_2" begin="3600" end="5400" number="696">
+        <walk from="612442387" busStop="P1_Salgado"/>
         <ride busStop="P1_Icarai" lines="bus"/>
         <walk to="785755603"/> 
     </personFlow>
-    <personFlow id="personFlow_3" begin="0" end="1200" number="200">
+    <!-- <personFlow id="personFlow_3" begin="0" end="1200" number="200">
         <walk from="244765838" busStop="P1_Ponte_Pedra"/>
         <ride busStop="P1_Icarai" lines="bus"/>
         <walk to="785755603"/> 

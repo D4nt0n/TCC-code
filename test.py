@@ -32,9 +32,9 @@ print(vehicles)
 vehicle_depart = 0
 for vehicle in vehicles:
 
-    print(vehicle.getAttribute("id"))
+    # print(vehicle.getAttribute("id"))
     vehicle.setAttribute("depart", str(vehicle_depart))
-    print(vehicle.getAttribute("depart"))
+    # print(vehicle.getAttribute("depart"))
     vehicle_depart = vehicle_depart + 300
 with open("osm_pt.rou.xml", "w") as fs:
     fs.write(tree.toxml())
