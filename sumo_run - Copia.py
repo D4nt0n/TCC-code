@@ -61,18 +61,18 @@ def danton(vehi_depart):
 
         traci.simulationStep()
 
-        people_at_stop = traci.busstop.getPersonIDs("P1_Salgado")
+        # people_at_stop = traci.busstop.getPersonIDs("P1_Salgado")
         vehicles = traci.vehicle.getIDList()
 
         # Get people information
-        for i in range(0, len(people_at_stop)):
+        """for i in range(0, len(people_at_stop)):
             personid = people_at_stop[i]
             # Get waiting time at Salgado Bus Stop
             waiting_time = traci.person.getWaitingTime(people_at_stop[i])
             # Pack people information
             personsList = [personid, waiting_time]
             packPersonsDataLine = flatten_list([personsList])
-            packPersonsData.append(packPersonsDataLine)
+            packPersonsData.append(packPersonsDataLine)"""
         # Get vehicles information
         for i in range(0, len(vehicles)):
 
@@ -121,14 +121,14 @@ def danton(vehi_depart):
     traci.close()
 
     # Vehicles information and dataframe calculations
-    column_names = ['person id', 'waiting time (s)']
+    """column_names = ['person id', 'waiting time (s)']
     person_dataset = pd.DataFrame(packPersonsData, index=None, columns=column_names)
     # person_dataset.to_excel("output_persons.xlsx", index=False)
 
     waiting_time = person_dataset.groupby('person id', as_index=False)['waiting time (s)'].max()
     waiting_time_mean = waiting_time['waiting time (s)'].mean()
 
-    print('Average Waiting Time', waiting_time_mean, 's')
+    print('Average Waiting Time', waiting_time_mean, 's')"""
 
     # Vehicles information and dataframe calculations
     column_names2 = ['vehid', 'spd', 'displacement', 'CO2 emission', 'Time', 'Capacity', 'Occupation', 'percentage']
@@ -144,19 +144,19 @@ def danton(vehi_depart):
         trip_time_list = [vehid, trip_time]
         packTimeDataLine = flatten_list([trip_time_list])
         packTimeData.append(packTimeDataLine)
+    column_names3 = ['vehid', 'trip_time']
+    dataset_time = pd.DataFrame(packTimeData, index=None, columns=column_names3)
 
-    print(packTimeData)
+    print(dataset_time)
     print(occupation_veh)
     print('Total emissions', total_emission, 'kgCO2')
     print(total_emission + 1 * not_attended_people)
-    # print(not_attended_people)
 
-    return total_emission + 1 * not_attended_people
+    return total_emission + 10 * not_attended_people
 
 
 vehi_depart = np.array(
-    [451.21975413873713, 898.5395732294994, 1354.4056917188504, 1891.8321082210034, 2284.5327147516427,
-     2775.017475886034, 3165.855588388499, 3605.957024792705, 4062.8884708442047, 4499.1129310853485, 5183.484496760182,
-     5418.553466617771])
+    [200, 400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200])
 print(danton(vehi_depart))
-function = minimize(danton, vehi_depart, method='Nelder-Mead')
+Farenz1 = minimize(danton, vehi_depart, method='Nelder-Mead')
+print(Farenz1)
