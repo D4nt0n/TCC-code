@@ -134,7 +134,7 @@ def danton(vehi_depart):
     column_names2 = ['vehid', 'spd', 'displacement', 'CO2 emission', 'Time', 'Capacity', 'Occupation', 'percentage']
     dataset = pd.DataFrame(packBigData, index=None, columns=column_names2)
     # dataset.to_excel("output.xlsx", index=False)
-
+    veh_emission = dataset.groupby('vehid', as_index=False)['CO2 emission'].sum()
     total_emission = dataset['CO2 emission'].sum() / 1000000
     occupation_veh = dataset.groupby('vehid', as_index=False)['percentage'].max()
     vehicles_list = dataset['vehid'].unique()
@@ -146,17 +146,19 @@ def danton(vehi_depart):
         packTimeData.append(packTimeDataLine)
     column_names3 = ['vehid', 'trip_time']
     dataset_time = pd.DataFrame(packTimeData, index=None, columns=column_names3)
-
+    print(veh_emission)
     print(dataset_time)
     print(occupation_veh)
     print('Total emissions', total_emission, 'kgCO2')
-    print(total_emission + 1 * not_attended_people)
+    print(total_emission + 5 * not_attended_people)
 
-    return total_emission + 10 * not_attended_people
+    return total_emission + 5 * not_attended_people
 
 
-vehi_depart = np.array(
-    [200, 400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200])
+# vehi_depart = np.arange(0,5850, 450)
+vehi_depart = np.arange(0, 5850, 450)
+   # np.array(
+    # [0, 400, 800, 1200, 1400, 1600, 2000, 2400, 2800, 3200, 3600, 3800, 4200, 4400, 4500, 4600, 4700, 4800, 5000, 5200, 5400, 5600, 5800, 6000])
 print(danton(vehi_depart))
 Farenz1 = minimize(danton, vehi_depart, method='Nelder-Mead')
 print(Farenz1)

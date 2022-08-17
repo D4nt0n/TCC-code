@@ -32,29 +32,59 @@
         <stop busStop="P1_Icarai" duration="20.00"/>
     </route>
 
-    <vehicle id="BRT1" type="pt2_bus" route="Salgado-PadreCacique" depart="448.11779352153167" line="bus">
+    <vehicle id="BRT1" type="pt2_bus" route="Salgado-PadreCacique" depart="395.34218720804216" line="bus">
     </vehicle>
-    <vehicle id="BRT2" type="pt2_bus" route="Salgado-PadreCacique" depart="907.5432822929412" line="bus">
+    <vehicle id="BRT2" type="pt2_bus" route="Salgado-PadreCacique" depart="607.9181113613199" line="bus">
     </vehicle>
-    <vehicle id="BRT3" type="pt2_bus" route="Salgado-PadreCacique" depart="1319.8375921004897" line="bus">
+    <vehicle id="BRT3" type="pt2_bus" route="Salgado-PadreCacique" depart="798.53566418316" line="bus">
     </vehicle>
-    <vehicle id="BRT4" type="pt2_bus" route="Salgado-PadreCacique" depart="1917.0754204191364" line="bus">
+    <vehicle id="BRT4" type="pt2_bus" route="Salgado-PadreCacique" depart="1002.393361419254" line="bus">
     </vehicle>
-    <vehicle id="BRT5" type="pt2_bus" route="Salgado-PadreCacique" depart="2313.339107248378" line="bus">
+    <vehicle id="BRT5" type="pt2_bus" route="Salgado-PadreCacique" depart="1215.5467134049604" line="bus">
     </vehicle>
-    <vehicle id="BRT6" type="pt2_bus" route="Salgado-PadreCacique" depart="2810.1484085123275" line="bus">
+    <vehicle id="BRT6" type="pt2_bus" route="Salgado-PadreCacique" depart="1408.090771357475" line="bus">
     </vehicle>
-    <vehicle id="BRT7" type="pt2_bus" route="Salgado-PadreCacique" depart="3177.745287291391" line="bus">
+    <vehicle id="BRT7" type="pt2_bus" route="Salgado-PadreCacique" depart="1611.1611897330263" line="bus">
     </vehicle>
-    <vehicle id="BRT8" type="pt2_bus" route="Salgado-PadreCacique" depart="3642.790600297135" line="bus">
+    <vehicle id="BRT8" type="pt2_bus" route="Salgado-PadreCacique" depart="1788.6703432477043" line="bus">
     </vehicle>
-    <vehicle id="BRT9" type="pt2_bus" route="Salgado-PadreCacique" depart="4078.757080799121" line="bus">
+    <vehicle id="BRT9" type="pt2_bus" route="Salgado-PadreCacique" depart="2007.6009607469928" line="bus">
     </vehicle>
-     <vehicle id="BRT10" type="pt2_bus" route="Salgado-PadreCacique" depart="4506.575649123534" line="bus">
+     <vehicle id="BRT10" type="pt2_bus" route="Salgado-PadreCacique" depart="2228.0921901547244" line="bus">
     </vehicle>
-     <vehicle id="BRT11" type="pt2_bus" route="Salgado-PadreCacique" depart="5128.107386240665" line="bus">
+     <vehicle id="BRT11" type="pt2_bus" route="Salgado-PadreCacique" depart="2415.507447664785" line="bus">
     </vehicle>
-     <vehicle id="BRT12" type="pt2_bus" route="Salgado-PadreCacique" depart="5488.226659094136" line="bus">
+     <vehicle id="BRT12" type="pt2_bus" route="Salgado-PadreCacique" depart="2615.3022024138854" line="bus">
+    </vehicle>
+    <vehicle id="BRT13" type="pt2_bus" route="Salgado-PadreCacique" depart="2856.241571956749" line="bus">
+    </vehicle>
+    <vehicle id="BRT14" type="pt2_bus" route="Salgado-PadreCacique" depart="3017.9753136300696" line="bus">
+    </vehicle>
+    <vehicle id="BRT15" type="pt2_bus" route="Salgado-PadreCacique" depart="3213.2352787449618" line="bus">
+    </vehicle>
+    <vehicle id="BRT16" type="pt2_bus" route="Salgado-PadreCacique" depart="3382.673172432238" line="bus">
+    </vehicle>
+    <vehicle id="BRT17" type="pt2_bus" route="Salgado-PadreCacique" depart="3604.122788238957" line="bus">
+    </vehicle>
+    <vehicle id="BRT18" type="pt2_bus" route="Salgado-PadreCacique" depart="3785.5355588818366" line="bus">
+    </vehicle>
+    <vehicle id="BRT19" type="pt2_bus" route="Salgado-PadreCacique" depart="3973.433363774814" line="bus">
+    </vehicle>
+    <vehicle id="BRT20" type="pt2_bus" route="Salgado-PadreCacique" depart="4215.94646493101" line="bus">
+    </vehicle>
+    <vehicle id="BRT21" type="pt2_bus" route="Salgado-PadreCacique" depart="4356.781357944301" line="bus">
+    </vehicle>
+    <vehicle id="BRT22" type="pt2_bus" route="Salgado-PadreCacique" depart="4587.678971295614" line="bus">
+    </vehicle>
+    <vehicle id="BRT23" type="pt2_bus" route="Salgado-PadreCacique" depart="4800.555383217745" line="bus">
+    </vehicle>
+    <vehicle id="BRT24" type="pt2_bus" route="Salgado-PadreCacique" depart="4919.003092009184" line="bus">
+    </vehicle>
+    <vehicle id="BRT25" type="pt2_bus" route="Salgado-PadreCacique" depart="5228.664385423579" line="bus">
+    </vehicle>
+    <vehicle id="BRT26" type="pt2_bus" route="Salgado-PadreCacique" depart="5386.510032862474" line="bus">
+    </vehicle>
+    <vehicle id="BRT27" type="pt2_bus" route="Salgado-PadreCacique" depart="5672.222535742451" line="bus">
     </vehicle>
 
     <personFlow id="personFlow_0" begin="0" end="1800" number="366">

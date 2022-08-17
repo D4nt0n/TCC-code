@@ -1,4 +1,6 @@
 import xml.dom.minidom as ET
+import numpy as np
+print(np.arange(0, 4800, 200))
 '''
 tree = ET.parse("osm_pt.rou.xml")
 flows = tree.getElementsByTagName("flow")
@@ -24,7 +26,7 @@ for flow in flows:
 with open("osm_pt.rou.xml", "w") as fs:
     fs.write(tree.toxml())
     fs.close()'''
-
+"""
 tree = ET.parse("osm_pt.rou.xml")
 vehicles = tree.getElementsByTagName("vehicle")
 print(vehicles)
@@ -38,7 +40,7 @@ for vehicle in vehicles:
     vehicle_depart = vehicle_depart + 300
 with open("osm_pt.rou.xml", "w") as fs:
     fs.write(tree.toxml())
-    fs.close()
+    fs.close()"""
 '''
     total_simulation = 0
     packBigData = []
