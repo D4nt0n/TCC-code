@@ -152,11 +152,11 @@ def danton(vehi_depart):
     print('Total emissions', total_emission, 'kgCO2')
     print(total_emission + 5 * not_attended_people)
 
-    return total_emission + 5 * not_attended_people
+    return total_emission + 10 * not_attended_people
 
 
-# vehi_depart = np.arange(0,5850, 450)
-vehi_depart = np.arange(0, 5850, 450)
+# vehi_depart = np.arange(100,5950, 450)
+vehi_depart = np.arange(100, 5950, 450)
    # np.array(
     # [0, 400, 800, 1200, 1400, 1600, 2000, 2400, 2800, 3200, 3600, 3800, 4200, 4400, 4500, 4600, 4700, 4800, 5000, 5200, 5400, 5600, 5800, 6000])
 print(danton(vehi_depart))
