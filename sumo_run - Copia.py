@@ -80,10 +80,14 @@ def danton(vehi_depart):
             capacity = 0
             occupation = 0
             percentage = 0
+
+            passenger_emission_factor = 1 + round(traci.vehicle.getPersonNumber(vehicles[i]), 2) * 0.15 / 100
+
+
             vehid = vehicles[i]
             spd = round(traci.vehicle.getSpeed(vehicles[i]) * 3.6, 2)
             displacement = round(traci.vehicle.getDistance(vehicles[i]), 2)
-            emissions = round(traci.vehicle.getCO2Emission(vehicles[i]), 2)
+            emissions = round(traci.vehicle.getCO2Emission(vehicles[i]), 2) * passenger_emission_factor
 
             # Get list of vehicles stopped at Padre Cacique Bus Stop
             bus_stopped = traci.busstop.getVehicleIDs("P3_Padre_Cacique")
@@ -116,7 +120,8 @@ def danton(vehi_depart):
             # print(traci.person.getIDCount())
             # print(traci.vehicle.getIDCount())
         if traci.vehicle.getIDCount() == 1:
-            not_attended_people = traci.person.getIDCount()
+            not_attended_people = traci.busstop.getPersonCount("P1_Salgado")
+            # print(not_attended_people)
             # print(not_attended_people)
     traci.close()
 
@@ -135,8 +140,14 @@ def danton(vehi_depart):
     dataset = pd.DataFrame(packBigData, index=None, columns=column_names2)
     # dataset.to_excel("output.xlsx", index=False)
     veh_emission = dataset.groupby('vehid', as_index=False)['CO2 emission'].sum()
-    total_emission = dataset['CO2 emission'].sum() / 1000000
     occupation_veh = dataset.groupby('vehid', as_index=False)['percentage'].max()
+    for index, row in occupation_veh.iterrows():
+        if row['percentage'] < 0.01:
+            vehid = row['vehid']
+            veh_emission.loc[veh_emission.vehid == vehid, 'CO2 emission'] = 0
+
+    total_emission = veh_emission['CO2 emission'].sum() / 1000000
+
     vehicles_list = dataset['vehid'].unique()
 
     for vehid in vehicles_list:
@@ -150,15 +161,19 @@ def danton(vehi_depart):
     print(dataset_time)
     print(occupation_veh)
     print('Total emissions', total_emission, 'kgCO2')
-    print(total_emission + 5 * not_attended_people)
+    print(not_attended_people, 'people not attended')
+    print(4 * total_emission + 5 * not_attended_people)
 
-    return total_emission + 10 * not_attended_people
+    return 4 * total_emission + 5 * not_attended_people
 
 
-# vehi_depart = np.arange(100,5950, 450)
-vehi_depart = np.arange(100, 5950, 450)
-   # np.array(
-    # [0, 400, 800, 1200, 1400, 1600, 2000, 2400, 2800, 3200, 3600, 3800, 4200, 4400, 4500, 4600, 4700, 4800, 5000, 5200, 5400, 5600, 5800, 6000])
+vehi_depart = np.arange(600, 12600, 500)
+
+""" vehi_depart = np.array([98.68815403,  326.80936372,  555.28335782, 769.83629291,992.83919787, 1206.32986037,
+                        1454.36451855, 1699.52819085, 1927.79386396, 2138.75071305, 2341.68200896, 2546.33949949,
+                        2822.34680128, 3008.04676911, 3210.22038298, 3469.73645239, 3632.09340494, 3974.2813598,
+                        4081.4865374, 4444.55357189, 4585.25325641, 4887.00920157, 5198.42275124, 5470.10764572])"""
+
 print(danton(vehi_depart))
 Farenz1 = minimize(danton, vehi_depart, method='Nelder-Mead')
 print(Farenz1)

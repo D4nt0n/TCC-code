@@ -1,6 +1,6 @@
 import xml.dom.minidom as ET
 import numpy as np
-print(np.arange(0, 4800, 200))
+print(np.arange(100, 5500, 225))
 '''
 tree = ET.parse("osm_pt.rou.xml")
 flows = tree.getElementsByTagName("flow")
