@@ -167,7 +167,7 @@ def danton(vehi_depart):
     return 4 * total_emission + 5 * not_attended_people
 
 
-vehi_depart = np.arange(600, 12600, 500)
+vehi_depart = np.arange(600, 15000, 240)
 
 """ vehi_depart = np.array([98.68815403,  326.80936372,  555.28335782, 769.83629291,992.83919787, 1206.32986037,
                         1454.36451855, 1699.52819085, 1927.79386396, 2138.75071305, 2341.68200896, 2546.33949949,

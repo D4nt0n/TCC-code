@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2022-08-24 15:26:41 by Eclipse SUMO netedit Version 1.12.0
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="DEFAULT_VEHTYPE" vClass="bus"/>
+    <vType id="pt2_bus" length="17.90" vClass="bus" guiShape="bus/flexible" height="3.00" personCapacity="150"/>
+    <vType id="pt_aerialway" vClass="bus"/>
+    <vType id="pt_bus" vClass="bus" guiShape="bus"/>
+    <vType id="pt_ferry" vClass="ship"/>
+    <vType id="pt_light_rail" vClass="rail_urban"/>
+    <vType id="pt_minibus" vClass="bus"/>
+    <vType id="pt_monorail" vClass="rail"/>
+    <vType id="pt_share_taxi" vClass="taxi"/>
+    <vType id="pt_subway" vClass="rail_urban"/>
+    <vType id="pt_train" vClass="rail"/>
+    <vType id="pt_tram" vClass="tram"/>
+    <vType id="pt_trolleybus" vClass="bus"/>
+    <vType id="t_0" vClass="bus"/>
+    <route id="Salgado-PadreCacique" edges="612442387 208356049 206611680#0 206611680#1 206611680#2 229038402 132415155 27882403#0 27882403#1 27882403#2 27882403#3 562626715 926832644 287533428 562621056 562621055 287533421#0 287533421#1 562608540 356686647 451653024#0 451653024#1 562608553 27126536 244765838 207989398 229187719 29221871 27027508 930311687 451652908#0 451652908#1 451652908#2 683571988#0 444013694 130582468#0 130582468#1 130582468#2 130582468#3 130582468#4 130582468#5 451652906#0 451652906#1 451652906#2 451652906#3 451652906#4 451652906#5 451652906#7 927790174#0 927790174#1 927790174#2 927790173 229187722 229187723 287533404 112414431#0 112414431#1 112414431#2 112414431#3 216490165#0 216490165#1 216490165#2 216490165#3 504115627#0 504115627#1 504115627#2 504115627#3 927794646#0 927794646#1 108664532#0 108664532#1 356396092 927271585#0 927271585#1 356396095#0 356396095#1 356396095#2 356396095#3 356396095#4 356396095#5 112422904 356396093#0 356396093#2 326538548#0 326538548#1 326538548#3 287754931#0 287754931#1 287754931#2 287754931#3 287754931#4 287754931#5 287754931#6 287754931#7 287754931#8 356396098#1 356396098#2 356396098#3 356396098#5 356396098#6 356396090 356396091 927304029 356396083 926810387 285776274 285776275#0 285776275#1 471664573 226319817#0 226319817#1 226319817#3 226319817#4 226319817#5 226319817#6 226319817#7 226319817#8 226319817#9 356396099 618007936 618007942 68911216 451653051 356396100#0 356396100#1 470020245#0 470020245#1 189381380 786581777#0 786581777#1 786581777#2 68915542#0 68915542#1 785755603" color="0,0,0,0">
+        <stop busStop="P1_Salgado" duration="60.00"/>
+        <stop busStop="P1_Salgado" duration="60.00"/>
+        <stop busStop="P1_Avai" duration="20.00"/>
+        <stop busStop="P1_Avai" duration="20.00"/>
+        <stop busStop="P1_Loureiro" duration="20.00"/>
+        <stop busStop="P1_Loureiro" duration="20.00"/>
+        <stop busStop="P1_Ponte_Pedra" duration="20.00"/>
+        <stop busStop="P1_Ponte_Pedra" duration="20.00"/>
+        <stop busStop="P1_Borges" duration="20.00"/>
+        <stop busStop="P1_Borges" duration="20.00"/>
+        <stop busStop="P2_Borges" duration="20.00"/>
+        <stop busStop="P2_Borges" duration="20.00"/>
+        <stop busStop="P3_Borges" duration="20.00"/>
+        <stop busStop="P3_Borges" duration="20.00"/>
+        <stop busStop="P4_Borges" duration="20.00"/>
+        <stop busStop="P4_Borges" duration="20.00"/>
+        <stop busStop="P1_Padre_Cacique" duration="20.00"/>
+        <stop busStop="P1_Padre_Cacique" duration="20.00"/>
+        <stop busStop="P2_Padre_Cacique" duration="20.00"/>
+        <stop busStop="P2_Padre_Cacique" duration="20.00"/>
+        <stop busStop="P3_Padre_Cacique" duration="20.00"/>
+        <stop busStop="P3_Padre_Cacique" duration="20.00"/>
+        <stop busStop="P1_Icarai" duration="20.00"/>
+        <stop busStop="P1_Icarai" duration="20.00"/>
+    </route>
+    <flow id="f_0" type="t_0" begin="0.00" from="926832642#1" to="785755587" via="451653094#0 184701785 451652908#2 504115627#0" end="3600.00" vehsPerHour="1800.00"/>
+    <personFlow id="personFlow_0" begin="0.00" end="1799.99" number="366"/>
+    <vehicle id="BRT1" type="pt2_bus" depart="600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT2" type="pt2_bus" depart="1100.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT3" type="pt2_bus" depart="1600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT4" type="pt2_bus" depart="2100.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT5" type="pt2_bus" depart="2600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT6" type="pt2_bus" depart="3100.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT7" type="pt2_bus" depart="3600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT8" type="pt2_bus" depart="4100.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT9" type="pt2_bus" depart="4600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT10" type="pt2_bus" depart="5100.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT11" type="pt2_bus" depart="5600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT12" type="pt2_bus" depart="6100.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT13" type="pt2_bus" depart="6600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT14" type="pt2_bus" depart="7100.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT15" type="pt2_bus" depart="7600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT16" type="pt2_bus" depart="8100.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT17" type="pt2_bus" depart="8600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT18" type="pt2_bus" depart="9100.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT19" type="pt2_bus" depart="9600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT20" type="pt2_bus" depart="10100.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT21" type="pt2_bus" depart="10600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT22" type="pt2_bus" depart="11100.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT23" type="pt2_bus" depart="11600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT24" type="pt2_bus" depart="12100.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT25" type="pt2_bus" depart="12600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT26" type="pt2_bus" depart="13100.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT27" type="pt2_bus" depart="13600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT28" type="pt2_bus" depart="14100.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT29" type="pt2_bus" depart="14600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT30" type="pt2_bus" depart="15100.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT31" type="pt2_bus" depart="15600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT32" type="pt2_bus" depart="16100.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT33" type="pt2_bus" depart="16600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT34" type="pt2_bus" depart="17100.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT35" type="pt2_bus" depart="17600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT36" type="pt2_bus" depart="18100.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT37" type="pt2_bus" depart="18600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT38" type="pt2_bus" depart="19100.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT39" type="pt2_bus" depart="19600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT40" type="pt2_bus" depart="20100.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT41" type="pt2_bus" depart="20600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT42" type="pt2_bus" depart="21100.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT43" type="pt2_bus" depart="21600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT44" type="pt2_bus" depart="22100.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT45" type="pt2_bus" depart="22600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT46" type="pt2_bus" depart="23100.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT47" type="pt2_bus" depart="23600.00" line="bus" route="Salgado-PadreCacique"/>
+    <vehicle id="BRT48" type="pt2_bus" depart="24100.00" line="bus" route="Salgado-PadreCacique"/>
+    <personFlow id="personFlow_1" begin="1800.00" end="3599.47" number="677"/>
+    <personFlow id="personFlow_2" begin="3600.00" end="5399.86" number="696"/>
+    <personFlow id="personFlow_3" begin="5400.00" end="7199.74" number="976"/>
+    <personFlow id="personFlow_4" begin="7200.00" end="8999.67" number="753"/>
+    <personFlow id="personFlow_5" begin="9000.00" end="10799.88" number="636"/>
+    <personFlow id="personFlow_6" begin="10800.00" end="12599.57" number="437"/>
+    <personFlow id="personFlow_7" begin="12600.00" end="14399.64" number="497"/>
+    <personFlow id="personFlow_8" begin="14400.00" end="16199.81" number="327"/>
+</routes>

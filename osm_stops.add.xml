@@ -56,5 +56,5 @@
     <busStop id="P3_Borges" lane="112414431#1_1" startPos="9.93" endPos="19.93" personCapacity="200"/>
     <busStop id="P3_Padre_Cacique" lane="926810387_1" startPos="17.22" endPos="27.22" personCapacity="200"/>
     <busStop id="P4_Borges" lane="356396092_1" startPos="35.75" endPos="45.75" personCapacity="200"/>
-    <busStop id="bs_0" lane="69749638#4_0" startPos="30.00" endPos="80.00" personCapacity="300" parkingLength="60.00"/>
+    <busStop id="P1_Mercado_Publico" lane="69749638#4_2" startPos="10.00" endPos="90.00" personCapacity="400" parkingLength="60.00"/>
 </additional>

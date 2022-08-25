@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2022-08-24 15:23:05 by Eclipse SUMO netedit Version 1.12.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="C:\Users\Danton%20Moura\Documents\GitHub\TCC-code\osm.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="C:\Users\Danton%20Moura\Documents\GitHub\TCC-code\osm.net.xml"/>
+        <output.street-names value="true"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-internal-links value="false"/>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="true"/>
+    </pedestrian>
+
+    <netedit>
+        <additional-files value="C:\Users\Danton%20Moura\Documents\GitHub\TCC-code\osm_stops2.add.xml"/>
+        <route-files value="C:\Users\Danton%20Moura\Documents\GitHub\TCC-code\osm_pt.rou.xml"/>
+    </netedit>
+
+    <report>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <busStop id="P1_Avai" lane="27882403#0_1" startPos="39.77" endPos="49.77" personCapacity="200"/>
+    <busStop id="P1_Borges" lane="451652908#2_1" startPos="97.12" endPos="107.12" personCapacity="200"/>
+    <busStop id="P1_Icarai" lane="470020245#0_1" startPos="50.00" endPos="90.00" personCapacity="200"/>
+    <busStop id="P1_Loureiro" lane="562621055_2" startPos="20.00" endPos="60.00" personCapacity="200"/>
+    <busStop id="P1_Padre_Cacique" lane="356396095#4_1" startPos="20.00" endPos="60.00" personCapacity="200"/>
+    <busStop id="P1_Ponte_Pedra" lane="244765838_1" startPos="20.00" endPos="60.00" personCapacity="200"/>
+    <busStop id="P1_Salgado" lane="612442387_1" startPos="30.00" endPos="80.00" personCapacity="300" parkingLength="50.00"/>
+    <busStop id="P2_Borges" lane="927790174#2_1" startPos="15.61" endPos="25.61" personCapacity="200"/>
+    <busStop id="P2_Padre_Cacique" lane="326538548#1_1" startPos="25.72" endPos="35.72" personCapacity="200"/>
+    <busStop id="P2_Salgado" lane="451653095_1" startPos="30.00" endPos="80.00" personCapacity="300" parkingLength="50.00"/>
+    <busStop id="P3_Borges" lane="112414431#1_1" startPos="9.93" endPos="19.93" personCapacity="200"/>
+    <busStop id="P3_Padre_Cacique" lane="926810387_1" startPos="17.22" endPos="27.22" personCapacity="200"/>
+    <busStop id="P4_Borges" lane="356396092_1" startPos="35.75" endPos="45.75" personCapacity="200"/>
+    <busStop id="P1_Mercado_Publico" lane="69749638#4_0" startPos="10.00" endPos="90.00" personCapacity="400" parkingLength="60.00"/>
+</additional>
