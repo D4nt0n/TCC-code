@@ -43,103 +43,198 @@
         <stop busStop="P1_Icarai" duration="20.00"/>
     </route>
 
-    <vehicle id="BRT1" type="pt2_bus" route="Salgado-PadreCacique" depart="600.0" line="bus">
+    <vehicle id="BRT1" type="pt2_bus" route="Salgado-PadreCacique" depart="601.4522129452603" line="bus">
     </vehicle>
-    <vehicle id="BRT2" type="pt2_bus" route="Mercado-Publico" depart="900.0" line="bus2">
+    <vehicle id="BRT2" type="pt2_bus" route="Mercado-Publico" depart="1002.4359916730483" line="bus2">
     </vehicle>
-    <vehicle id="BRT3" type="pt2_bus" route="Salgado-PadreCacique" depart="1200.0" line="bus">
+    <vehicle id="BRT3" type="pt2_bus" route="Salgado-PadreCacique" depart="1403.419007834255" line="bus">
     </vehicle>
-    <vehicle id="BRT4" type="pt2_bus" route="Mercado-Publico" depart="1500.0" line="bus2">
+    <vehicle id="BRT4" type="pt2_bus" route="Mercado-Publico" depart="1804.4359026622344" line="bus2">
     </vehicle>
-    <vehicle id="BRT5" type="pt2_bus" route="Salgado-PadreCacique" depart="1800.0" line="bus">
+    <vehicle id="BRT5" type="pt2_bus" route="Salgado-PadreCacique" depart="2205.3521890538677" line="bus">
     </vehicle>
-    <vehicle id="BRT6" type="pt2_bus" route="Mercado-Publico" depart="2100.0" line="bus2">
+    <vehicle id="BRT6" type="pt2_bus" route="Mercado-Publico" depart="2606.354986425351" line="bus2">
     </vehicle>
-    <vehicle id="BRT7" type="pt2_bus" route="Salgado-PadreCacique" depart="2400.0" line="bus">
+    <vehicle id="BRT7" type="pt2_bus" route="Salgado-PadreCacique" depart="2995.0949694683322" line="bus">
     </vehicle>
-    <vehicle id="BRT8" type="pt2_bus" route="Mercado-Publico" depart="2700.0" line="bus2">
+    <vehicle id="BRT8" type="pt2_bus" route="Mercado-Publico" depart="3408.302220025476" line="bus2">
     </vehicle>
-    <vehicle id="BRT9" type="pt2_bus" route="Salgado-PadreCacique" depart="3000.0" line="bus">
+    <vehicle id="BRT9" type="pt2_bus" route="Salgado-PadreCacique" depart="3809.238390488533" line="bus">
     </vehicle>
-     <vehicle id="BRT10" type="pt2_bus" route="Mercado-Publico" depart="3300.0" line="bus2">
+     <vehicle id="BRT10" type="pt2_bus" route="Mercado-Publico" depart="4210.174912177066" line="bus2">
     </vehicle>
-     <vehicle id="BRT11" type="pt2_bus" route="Salgado-PadreCacique" depart="3600.0" line="bus">
+     <vehicle id="BRT11" type="pt2_bus" route="Salgado-PadreCacique" depart="4611.149753700584" line="bus">
     </vehicle>
-     <vehicle id="BRT12" type="pt2_bus" route="Mercado-Publico" depart="3900.0" line="bus2">
+     <vehicle id="BRT12" type="pt2_bus" route="Mercado-Publico" depart="5002.0153035424055" line="bus2">
     </vehicle>
-    <vehicle id="BRT13" type="pt2_bus" route="Salgado-PadreCacique" depart="4200.0" line="bus">
+    <vehicle id="BRT13" type="pt2_bus" route="Salgado-PadreCacique" depart="5413.206918809592" line="bus">
     </vehicle>
-    <vehicle id="BRT14" type="pt2_bus" route="Mercado-Publico" depart="4500.0" line="bus2">
+    <vehicle id="BRT14" type="pt2_bus" route="Mercado-Publico" depart="5808.7895222079505" line="bus2">
     </vehicle>
-    <vehicle id="BRT15" type="pt2_bus" route="Salgado-PadreCacique" depart="4800.0" line="bus">
+    <vehicle id="BRT15" type="pt2_bus" route="Salgado-PadreCacique" depart="6186.851733094731" line="bus">
     </vehicle>
-    <vehicle id="BRT16" type="pt2_bus" route="Mercado-Publico" depart="5100.0" line="bus2">
+    <vehicle id="BRT16" type="pt2_bus" route="Mercado-Publico" depart="6616.082664977814" line="bus2">
     </vehicle>
-    <vehicle id="BRT17" type="pt2_bus" route="Salgado-PadreCacique" depart="5400.0" line="bus">
+    <vehicle id="BRT17" type="pt2_bus" route="Salgado-PadreCacique" depart="7017.02358686315" line="bus">
     </vehicle>
-    <vehicle id="BRT18" type="pt2_bus" route="Mercado-Publico" depart="5700.0" line="bus2">
+    <vehicle id="BRT18" type="pt2_bus" route="Mercado-Publico" depart="7423.00212618345" line="bus2">
     </vehicle>
-    <vehicle id="BRT19" type="pt2_bus" route="Salgado-PadreCacique" depart="6000.0" line="bus">
+    <vehicle id="BRT19" type="pt2_bus" route="Salgado-PadreCacique" depart="7818.634875108132" line="bus">
     </vehicle>
-    <vehicle id="BRT20" type="pt2_bus" route="Mercado-Publico" depart="6300.0" line="bus2">
+    <vehicle id="BRT20" type="pt2_bus" route="Mercado-Publico" depart="8220.042679681083" line="bus2">
     </vehicle>
-    <vehicle id="BRT21" type="pt2_bus" route="Salgado-PadreCacique" depart="6600.0" line="bus">
+    <vehicle id="BRT21" type="pt2_bus" route="Salgado-PadreCacique" depart="8621.164045044225" line="bus">
     </vehicle>
-    <vehicle id="BRT22" type="pt2_bus" route="Mercado-Publico" depart="6900.0" line="bus2">
+    <vehicle id="BRT22" type="pt2_bus" route="Mercado-Publico" depart="9021.82569109902" line="bus2">
     </vehicle>
-     <vehicle id="BRT23" type="pt2_bus" route="Salgado-PadreCacique" depart="7200.0" line="bus">
+     <vehicle id="BRT23" type="pt2_bus" route="Salgado-PadreCacique" depart="9391.486945153196" line="bus">
     </vehicle>
-     <vehicle id="BRT24" type="pt2_bus" route="Mercado-Publico" depart="7500.0" line="bus2">
+     <vehicle id="BRT24" type="pt2_bus" route="Mercado-Publico" depart="9823.953406357963" line="bus2">
     </vehicle>
-    <vehicle id="BRT25" type="pt2_bus" route="Salgado-PadreCacique" depart="7800.0" line="bus">
+    <vehicle id="BRT25" type="pt2_bus" route="Salgado-PadreCacique" depart="10224.876287983414" line="bus">
     </vehicle>
-    <vehicle id="BRT26" type="pt2_bus" route="Mercado-Publico" depart="8100.0" line="bus2">
+    <vehicle id="BRT26" type="pt2_bus" route="Mercado-Publico" depart="10625.867811594373" line="bus2">
     </vehicle>
-    <vehicle id="BRT27" type="pt2_bus" route="Salgado-PadreCacique" depart="8400.0" line="bus">
+    <vehicle id="BRT27" type="pt2_bus" route="Salgado-PadreCacique" depart="11026.886485410138" line="bus">
     </vehicle>
-    <vehicle id="BRT28" type="pt2_bus" route="Mercado-Publico" depart="8700.0" line="bus2">
+    <vehicle id="BRT28" type="pt2_bus" route="Mercado-Publico" depart="11427.864173658983" line="bus2">
     </vehicle>
-    <vehicle id="BRT29" type="pt2_bus" route="Salgado-PadreCacique" depart="9000.0" line="bus">
+    <vehicle id="BRT29" type="pt2_bus" route="Salgado-PadreCacique" depart="11828.938805043714" line="bus">
     </vehicle>
-    <vehicle id="BRT30" type="pt2_bus" route="Mercado-Publico" depart="9300.0" line="bus2">
+    <vehicle id="BRT30" type="pt2_bus" route="Mercado-Publico" depart="12176.841527133847" line="bus2">
     </vehicle>
-    <vehicle id="BRT31" type="pt2_bus" route="Salgado-PadreCacique" depart="9600.0" line="bus">
+    <vehicle id="BRT31" type="pt2_bus" route="Salgado-PadreCacique" depart="12581.69177622511" line="bus">
     </vehicle>
-    <vehicle id="BRT32" type="pt2_bus" route="Mercado-Publico" depart="9900.0" line="bus2">
+    <vehicle id="BRT32" type="pt2_bus" route="Mercado-Publico" depart="13009.953345012811" line="bus2">
     </vehicle>
-    <vehicle id="BRT33" type="pt2_bus" route="Salgado-PadreCacique" depart="10200.0" line="bus">
+    <vehicle id="BRT33" type="pt2_bus" route="Salgado-PadreCacique" depart="13432.752625520858" line="bus">
     </vehicle>
-     <vehicle id="BRT34" type="pt2_bus" route="Mercado-Publico" depart="10500.0" line="bus2">
+     <vehicle id="BRT34" type="pt2_bus" route="Mercado-Publico" depart="13834.094741598215" line="bus2">
     </vehicle>
-     <vehicle id="BRT35" type="pt2_bus" route="Salgado-PadreCacique" depart="10800.0" line="bus">
+     <vehicle id="BRT35" type="pt2_bus" route="Salgado-PadreCacique" depart="14234.708004071574" line="bus">
     </vehicle>
-     <vehicle id="BRT36" type="pt2_bus" route="Mercado-Publico" depart="11100.0" line="bus2">
+     <vehicle id="BRT36" type="pt2_bus" route="Mercado-Publico" depart="14635.685691132107" line="bus2">
     </vehicle>
-    <vehicle id="BRT37" type="pt2_bus" route="Salgado-PadreCacique" depart="11400.0" line="bus">
+    <vehicle id="BRT37" type="pt2_bus" route="Salgado-PadreCacique" depart="14980.010054190068" line="bus">
     </vehicle>
-    <vehicle id="BRT38" type="pt2_bus" route="Mercado-Publico" depart="11700.0" line="bus2">
+    <vehicle id="BRT38" type="pt2_bus" route="Mercado-Publico" depart="15353.65613804025" line="bus2">
     </vehicle>
-    <vehicle id="BRT39" type="pt2_bus" route="Salgado-PadreCacique" depart="12000.0" line="bus">
+    <vehicle id="BRT39" type="pt2_bus" route="Salgado-PadreCacique" depart="16164.918380830146" line="bus">
     </vehicle>
-    <vehicle id="BRT40" type="pt2_bus" route="Mercado-Publico" depart="12300.0" line="bus2">
+    <vehicle id="BRT40" type="pt2_bus" route="Mercado-Publico" depart="16220.368303662552" line="bus2">
     </vehicle>
-    <vehicle id="BRT41" type="pt2_bus" route="Salgado-PadreCacique" depart="12600.0" line="bus">
+    <vehicle id="BRT41" type="pt2_bus" route="Salgado-PadreCacique" depart="16640.574141403333" line="bus">
     </vehicle>
-    <vehicle id="BRT42" type="pt2_bus" route="Mercado-Publico" depart="12900.0" line="bus2">
+    <vehicle id="BRT42" type="pt2_bus" route="Mercado-Publico" depart="17031.87838492698" line="bus2">
     </vehicle>
-    <vehicle id="BRT43" type="pt2_bus" route="Salgado-PadreCacique" depart="13200.0" line="bus">
+    <vehicle id="BRT43" type="pt2_bus" route="Salgado-PadreCacique" depart="17402.299619532605" line="bus">
     </vehicle>
-    <vehicle id="BRT44" type="pt2_bus" route="Mercado-Publico" depart="13500.0" line="bus2">
+    <vehicle id="BRT44" type="pt2_bus" route="Mercado-Publico" depart="17337.230052408882" line="bus2">
     </vehicle>
-    <vehicle id="BRT45" type="pt2_bus" route="Salgado-PadreCacique" depart="13800.0" line="bus">
+    <vehicle id="BRT45" type="pt2_bus" route="Salgado-PadreCacique" depart="18153.711279085823" line="bus">
     </vehicle>
-    <vehicle id="BRT46" type="pt2_bus" route="Mercado-Publico" depart="14100.0" line="bus2">
+    <vehicle id="BRT46" type="pt2_bus" route="Mercado-Publico" depart="18556.09455538381" line="bus2">
     </vehicle>
-     <vehicle id="BRT47" type="pt2_bus" route="Salgado-PadreCacique" depart="14400.0" line="bus">
+     <vehicle id="BRT47" type="pt2_bus" route="Salgado-PadreCacique" depart="18956.01552155706" line="bus">
     </vehicle>
-    <vehicle id="BRT48" type="pt2_bus" route="Mercado-Publico" depart="14700.0" line="bus2">
+    <vehicle id="BRT48" type="pt2_bus" route="Mercado-Publico" depart="19346.835281007276" line="bus2">
     </vehicle>  
-    
+ <!--   <vehicle id="BRT49" type="pt2_bus" route="Salgado-PadreCacique" depart="12120.0" line="bus">
+    </vehicle>
+    <vehicle id="BRT50" type="pt2_bus" route="Mercado-Publico" depart="12360.0" line="bus2">
+    </vehicle>
+    <vehicle id="BRT51" type="pt2_bus" route="Salgado-PadreCacique" depart="12600.0" line="bus">
+    </vehicle>
+    <vehicle id="BRT52" type="pt2_bus" route="Mercado-Publico" depart="12840.0" line="bus2">
+    </vehicle>
+    <vehicle id="BRT53" type="pt2_bus" route="Salgado-PadreCacique" depart="13080.0" line="bus">
+    </vehicle>
+    <vehicle id="BRT54" type="pt2_bus" route="Mercado-Publico" depart="13320.0" line="bus2">
+    </vehicle>
+    <vehicle id="BRT55" type="pt2_bus" route="Salgado-PadreCacique" depart="13560.0" line="bus">
+    </vehicle>
+    <vehicle id="BRT56" type="pt2_bus" route="Mercado-Publico" depart="13800.0" line="bus2">
+    </vehicle>
+    <vehicle id="BRT57" type="pt2_bus" route="Salgado-PadreCacique" depart="14040.0" line="bus">
+    </vehicle>
+     <vehicle id="BRT58" type="pt2_bus" route="Mercado-Publico" depart="14280.0" line="bus2">
+    </vehicle>
+     <vehicle id="BRT59" type="pt2_bus" route="Salgado-PadreCacique" depart="14520.0" line="bus">
+    </vehicle>
+     <vehicle id="BRT60" type="pt2_bus" route="Mercado-Publico" depart="14760.0" line="bus2">
+    </vehicle>
+    <vehicle id="BRT61" type="pt2_bus" route="Salgado-PadreCacique" depart="15000.0" line="bus">
+    </vehicle>
+    <vehicle id="BRT62" type="pt2_bus" route="Mercado-Publico" depart="15240.0" line="bus2">
+    </vehicle>
+    <vehicle id="BRT63" type="pt2_bus" route="Salgado-PadreCacique" depart="15480.0" line="bus">
+    </vehicle>
+    <vehicle id="BRT64" type="pt2_bus" route="Mercado-Publico" depart="15720.0" line="bus2">
+    </vehicle>
+    <vehicle id="BRT65" type="pt2_bus" route="Salgado-PadreCacique" depart="15960.0" line="bus">
+    </vehicle>
+    <vehicle id="BRT66" type="pt2_bus" route="Mercado-Publico" depart="16200.0" line="bus2">
+    </vehicle>
+    <vehicle id="BRT67" type="pt2_bus" route="Salgado-PadreCacique" depart="16440.0" line="bus">
+    </vehicle>
+    <vehicle id="BRT68" type="pt2_bus" route="Mercado-Publico" depart="16680.0" line="bus2">
+    </vehicle>
+    <vehicle id="BRT69" type="pt2_bus" route="Salgado-PadreCacique" depart="16920.0" line="bus">
+    </vehicle>
+    <vehicle id="BRT70" type="pt2_bus" route="Mercado-Publico" depart="17160.0" line="bus2">
+    </vehicle>
+     <vehicle id="BRT71" type="pt2_bus" route="Salgado-PadreCacique" depart="17400.0" line="bus">
+    </vehicle>
+     <vehicle id="BRT72" type="pt2_bus" route="Mercado-Publico" depart="17640.0" line="bus2">
+    </vehicle>
+    <vehicle id="BRT73" type="pt2_bus" route="Salgado-PadreCacique" depart="17880.0" line="bus">
+    </vehicle>
+    <vehicle id="BRT74" type="pt2_bus" route="Mercado-Publico" depart="18120.0" line="bus2">
+    </vehicle>
+    <vehicle id="BRT75" type="pt2_bus" route="Salgado-PadreCacique" depart="18360.0" line="bus">
+    </vehicle>
+    <vehicle id="BRT76" type="pt2_bus" route="Mercado-Publico" depart="18600.0" line="bus2">
+    </vehicle>
+    <vehicle id="BRT77" type="pt2_bus" route="Salgado-PadreCacique" depart="18840.0" line="bus">
+    </vehicle>
+    <vehicle id="BRT78" type="pt2_bus" route="Mercado-Publico" depart="19080.0" line="bus2">
+    </vehicle>
+    <vehicle id="BRT79" type="pt2_bus" route="Salgado-PadreCacique" depart="19320.0" line="bus">
+    </vehicle>
+    <vehicle id="BRT80" type="pt2_bus" route="Mercado-Publico" depart="19560.0" line="bus2">
+    </vehicle>
+    <vehicle id="BRT81" type="pt2_bus" route="Salgado-PadreCacique" depart="19800.0" line="bus">
+    </vehicle>
+     <vehicle id="BRT82" type="pt2_bus" route="Mercado-Publico" depart="20040.0" line="bus2">
+    </vehicle>
+     <vehicle id="BRT83" type="pt2_bus" route="Salgado-PadreCacique" depart="20280.0" line="bus">
+    </vehicle>
+     <vehicle id="BRT84" type="pt2_bus" route="Mercado-Publico" depart="20520.0" line="bus2">
+    </vehicle>
+    <vehicle id="BRT85" type="pt2_bus" route="Salgado-PadreCacique" depart="20760.0" line="bus">
+    </vehicle>
+    <vehicle id="BRT86" type="pt2_bus" route="Mercado-Publico" depart="21000.0" line="bus2">
+    </vehicle>
+    <vehicle id="BRT87" type="pt2_bus" route="Salgado-PadreCacique" depart="21240.0" line="bus">
+    </vehicle>
+    <vehicle id="BRT88" type="pt2_bus" route="Mercado-Publico" depart="21480.0" line="bus2">
+    </vehicle>
+    <vehicle id="BRT89" type="pt2_bus" route="Salgado-PadreCacique" depart="21720.0" line="bus">
+    </vehicle>
+    <vehicle id="BRT90" type="pt2_bus" route="Mercado-Publico" depart="21960.0" line="bus2">
+    </vehicle>
+    <vehicle id="BRT91" type="pt2_bus" route="Salgado-PadreCacique" depart="22200.0" line="bus">
+    </vehicle>
+    <vehicle id="BRT92" type="pt2_bus" route="Mercado-Publico" depart="22440.0" line="bus2">
+    </vehicle>
+    <vehicle id="BRT93" type="pt2_bus" route="Salgado-PadreCacique" depart="22680.0" line="bus">
+    </vehicle>
+    <vehicle id="BRT94" type="pt2_bus" route="Mercado-Publico" depart="22920.0" line="bus2">
+    </vehicle>
+    <vehicle id="BRT95" type="pt2_bus" route="Salgado-PadreCacique" depart="23160.0" line="bus">
+    </vehicle>
+    <vehicle id="BRT96" type="pt2_bus" route="Mercado-Publico" depart="23400.0" line="bus2">
+    </vehicle>  -->    
     <personFlow id="personFlow_0" begin="0" end="1800" number="183">
         <walk from="612442387" busStop="P1_Salgado"/>
         <ride busStop="P1_Icarai" lines="bus"/>
@@ -187,7 +282,7 @@
     </personFlow>
         <personFlow id="personFlow_4.1" begin="7200" end="9000" number="377">
         <walk from="287533442#3" busStop="P1_Mercado_Publico"/>
-        <ride busStop="P1_Icarai" lines="bus"/>
+        <ride busStop="P1_Icarai" lines="bus2"/>
         <walk to="785755603"/> 
     </personFlow>
     <personFlow id="personFlow_5" begin="9000" end="10800" number="318">
